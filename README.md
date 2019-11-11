@@ -19,9 +19,6 @@ It is based on the official [boilerplate](https://github.com/webdriverio/cucumbe
 - Support logic for built-in steps can be reused in custom step definitions.
  - For example you can write a login step definition it can uses the `setValue()` and `click()` support helpers.
 
-# Todos
-* Publish on github and npm
-
 # How to use
 
 ## Requirements

@@ -230,7 +230,7 @@ All of these steps can be used with `Given`, `When`, `Then` and `And`.
 
 ## Support helpers
 
-The step definitions above implement their logic in methods found in the [support](support) folder. These methods can be reused, if you want to write your own step definitions. Have a look at the [docs/index.html](docs/index.html) file for a list of methods.
+The step definitions above implement their logic in methods found in the [src/support](src/support) folder. These methods can be reused, if you want to write your own step definitions. Have a look at the [docs](https://jambit.github.io/wdio-cucumber-selected-steps/) file for a list of methods.
 
 These methods can be imported like this:
 

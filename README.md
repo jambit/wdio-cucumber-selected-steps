@@ -291,9 +291,9 @@ paramType.bool.setTrue('does not contain'),
 paramType.bool.setFalse('contains'),
 ```
 
-You can even write your own paramTypes. Just have a look at the source-code [src/support](src/support).
+You can even write your own paramTypes. Just have a look at the built-in ones: [src/support/paramType.ts](src/support/paramType.ts).
 
-For samples of how steps can look, just take a look at the steps folder of this library. The logic implementation resides in the support folder.
+For samples of how steps can look, just take a look at the [src/steps](src/steps) folder of this library. The logic implementation resides in the [src/support](src/support) folder.
 
 # License
 

@@ -30,7 +30,7 @@ The [Webdriver.io with Cucumber Framework](https://github.com/webdriverio/) V5.
 Take a look at the [sample project](https://github.com/jambit/wdio-cucumber-selected-steps-demo)
 
 The most important steps are:
-- Install the project: `npm install wdio-cucumber-selected-steps`
+- Install the project: `npm install @jambit/wdio-cucumber-selected-steps`
 - Install babel (`@babel/core`, `@babel/preset-env` and `@babel/register`)
 - Adjust the wdio.conf.js file (see below)
 
@@ -47,7 +47,7 @@ require("@babel/register")({
 });
 
 // At the top:
-const setupSelectors = require('wdio-cucumber-selected-steps').setupSelectors;
+const setupSelectors = require('@jambit/wdio-cucumber-selected-steps').setupSelectors;
 
 exports.config = {
     //...
@@ -55,7 +55,7 @@ exports.config = {
         //...
         require: [
             // Add the selected steps to cucumber:
-            './node_modules/wdio-cucumber-selected-steps/lib/steps/*.js',
+            './node_modules/@jambit/wdio-cucumber-selected-steps/lib/steps/*.js',
             // ...
         ],
         //...
@@ -96,7 +96,7 @@ If you use the [Cucumber (Gherkin) Full Support](https://marketplace.visualstudi
 ```json
 {
     "cucumberautocomplete.steps": [
-        "node_modules/wdio-cucumber-selected-steps/lib/steps/*.js",
+        "node_modules/@jambit/wdio-cucumber-selected-steps/lib/steps/*.js",
         "cucumberautocomplete.syncfeatures": "src/features/*.feature",
         "src/steps/*.js"
     ],
@@ -232,7 +232,7 @@ The step definitions above implement their logic in methods found in the [src/su
 These methods can be imported like this:
 
 ```javascript
-import { selectOption } from 'wdio-cucumber-selected-steps/lib/support';
+import { selectOption } from '@jambit/wdio-cucumber-selected-steps/lib/support';
 ```
 
 ## Writing your own steps
@@ -241,7 +241,7 @@ Say, you want to do a bit more than just one of the elemental things above. Just
 
 Example login step (ideally split into separate files, but here in one for simplicity):
 ```javascript
-import { defineTypedStep, setValue, paramType, click } from 'wdio-cucumber-selected-steps/lib/support';
+import { defineTypedStep, setValue, paramType, click } from '@jambit/wdio-cucumber-selected-steps/lib/support';
 // ...
 
 const loginStep = (user) => {

@@ -1,0 +1,43 @@
+{
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "project": "./tsconfig.json",
+        "tsconfigRootDir": "."
+    },
+    "plugins": [
+        "@typescript-eslint"
+    ],
+    "extends": [
+        "airbnb-base",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:import/typescript"
+    ],
+    "rules": {
+        "max-len": ["error", { "code": 150, "ignoreRegExpLiterals": true }],
+        "prefer-destructuring": ["off"],
+        "no-use-before-define": ["error", { "functions": false, "classes": true }],
+        "class-methods-use-this": ["off"],
+        "no-console": ["error"],
+        "operator-linebreak": ["error", "after", { "overrides": { "?": "before", ":": "before", "+": "before", "&&": "before" } }],
+        "import/prefer-default-export": ["off"],
+        "import/order": ["off"],
+        "indent": ["error", 4, {"SwitchCase": 1}],
+        "@typescript-eslint/ban-ts-ignore": "off",
+        "@typescript-eslint/no-angle-bracket-type-assertion": "off",
+        "@typescript-eslint/consistent-type-assertions": ["warn", { "assertionStyle": "as", "objectLiteralTypeAssertions": "allow" }],
+        "@typescript-eslint/indent": ["error", 4, {"SwitchCase": 1}],
+        "@typescript-eslint/prefer-destructuring": ["off"],
+        "@typescript-eslint/explicit-function-return-type": ["off"],
+        "@typescript-eslint/no-use-before-define": ["off", { "functions": false, "classes": true }],
+        "@typescript-eslint/explicit-member-accessibility": ["off"],
+        "@typescript-eslint/camelcase": ["off"],
+        "@typescript-eslint/no-non-null-assertion": ["off"],
+        "@typescript-eslint/no-object-literal-type-assertion": ["off"]
+    },
+    "globals": {
+        "browser": "readonly",
+        "getSelector": "readonly",
+        "$$": "readonly",
+        "$": "readonly"
+    }
+}

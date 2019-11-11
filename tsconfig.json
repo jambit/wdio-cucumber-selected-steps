@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "declaration": true,
+    "outDir": "lib",
+    "esModuleInterop": true,
+    "types": [
+      "@wdio/sync"
+    ],
+    "moduleResolution": "node",
+    "target": "es6",
+    "lib": [
+      "dom",
+      "es2018"
+    ]
+  },
+  "include": [
+    "./src"
+  ],
+  "exclude": [
+    "./node_modules"
+  ]
+}

@@ -291,7 +291,7 @@ paramType.bool.setTrue('does not contain'),
 paramType.bool.setFalse('contains'),
 ```
 
-You can even write your own paramTypes. Just have a look at the source-code [src/support/index.js](src/support/index.js).
+You can even write your own paramTypes. Just have a look at the source-code [src/support](src/support).
 
 For samples of how steps can look, just take a look at the steps folder of this library. The logic implementation resides in the support folder.
 

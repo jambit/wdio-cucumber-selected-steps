@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset='utf-8'>
-  <title>@jambit/wdio-cucumber-selected-steps 0.8.0 | Documentation</title>
+  <title>@jambit/wdio-cucumber-selected-steps 0.8.2 | Documentation</title>
   <meta name='description' content='Cucumber step definition basics for easy import'>
   <meta name='viewport' content='width=device-width,initial-scale=1'>
   <link href='assets/bass.css' rel='stylesheet'>
@@ -15,7 +15,7 @@
       <div id='split-left' class='overflow-auto fs0 height-viewport-100'>
         <div class='py1 px2'>
           <h3 class='mb0 no-anchor'>@jambit/wdio-cucumber-selected-steps</h3>
-          <div class='mb1'><code>0.8.0</code></div>
+          <div class='mb1'><code>0.8.2</code></div>
           <input
             placeholder='Filter'
             id='filter-input'
@@ -469,6 +469,16 @@
                   href='#geturlorpath'
                   class="">
                   getUrlOrPath
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#gettext'
+                  class="">
+                  getText
                   
                 </a>
                 
@@ -4051,6 +4061,76 @@ object but we want to assert against a string</p>
   
   <div class='clearfix'>
     
+    <h3 class='fl m0' id='gettext'>
+      getText
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Get the text of an element</p>
+
+    <div class='pre p1 fill-light mt0'>getText</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>element</span> <code class='quiet'>(any)</code>
+	    The element
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>any</code>:
+        The element text depending on the specified text method.
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
     <h3 class='fl m0' id='gettextorvalue'>
       getTextOrValue
     </h3>
@@ -4087,8 +4167,8 @@ object but we want to assert against a string</p>
       
         <div class='space-bottom0'>
           <div>
-            <span class='code bold'>element</span> <code class='quiet'>(<a href="#elementquery">ElementQuery</a>)</code>
-	    The element query
+            <span class='code bold'>element</span> <code class='quiet'>(WebdriverIO.Element)</code>
+	    The element
 
           </div>
           

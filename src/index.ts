@@ -19,7 +19,7 @@ const mappers: { [s: string]: (file: string) => SelectorMap } = {
 // alias
 mappers.yml = mappers.yaml;
 
-exports.setupSelectors = (patterns: string[]) => {
+export const setupSelectors = (patterns: string[]) => {
     const cwd = process.cwd();
     const importedSelectors = patterns
         .map((pattern) => glob.sync(pattern))
@@ -40,4 +40,10 @@ exports.setupSelectors = (patterns: string[]) => {
         return selector;
     };
     return global.getSelector;
+};
+
+global.selectedStepsTextMethod = 'getText';
+
+export const setupTextMethod = (method: 'getText' | 'textContent') => {
+    global.selectedStepsTextMethod = method;
 };

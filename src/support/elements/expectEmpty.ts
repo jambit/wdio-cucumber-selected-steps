@@ -9,7 +9,7 @@ import { ElementQuery } from '../elementQuery';
  * @param reverse   Check for opposite state
  */
 export default (type: 'element' | 'button', element: ElementQuery, reverse: boolean) => {
-    const text = getTextOrValue(type, element);
+    const text = getTextOrValue(type, element());
 
     if (reverse) {
         expect(text).to.not.equal('');

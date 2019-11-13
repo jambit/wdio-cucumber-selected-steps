@@ -10,7 +10,7 @@ import { ElementQuery } from '../elementQuery';
  * @param expectedText  The text to check against
  */
 export default (type: 'element' | 'button', element: ElementQuery, reverse: boolean, expectedText: string) => {
-    const text = getTextOrValue(type, element);
+    const text = getTextOrValue(type, element());
 
     if (reverse) {
         expect(text).to.not.contain(expectedText);

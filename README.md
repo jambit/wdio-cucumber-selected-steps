@@ -70,6 +70,24 @@ exports.config = {
     },
 ```
 
+#### wdio.conf.js adjustments for text method
+Additionally, you can configure the text method used. By default, wdio uses `element.getText()`, which will return the transformed text. I.e. if you set your css to upper-case some text, you will get the upper-case version of the text. If you want to get the non-transformed version, you would have to test the attribute `textContent`. To make this more convenient, you can configure the default behavior.
+
+```JavaScript
+const { setupSelectors, setupTextMethod } = require('@jambit/wdio-cucumber-selected-steps');
+
+exports.config = {
+    // ...
+    before: function before() {
+        // Setup the path to your selectors:
+        setupSelectors(...);
+        setupTextMethod('textContent');
+        // ...
+    },
+```
+
+If you want to use this logic in your custom steps, use our `getText()` helper.
+
 ## Creating selector files
 
 In `src/selectors` (of course, you can change the path), create `.js` files that export a map as default like this:

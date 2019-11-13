@@ -1,5 +1,6 @@
 import { expect } from 'chai';
 import { ElementQuery } from '../elementQuery';
+import { getText } from '../helpers';
 
 const STATE_HANDLERS = {
     'be checked': (element: ElementQuery, ms: number, reverse: boolean) => browser.waitUntil(
@@ -15,12 +16,12 @@ const STATE_HANDLERS = {
     'be enabled': (element: ElementQuery, ms: number, reverse: boolean) => element().waitForEnabled(ms, reverse),
     'be displayed': (element: ElementQuery, ms: number, reverse: boolean) => element().waitForDisplayed(ms, reverse),
     'have a text': (element: ElementQuery, ms: number, reverse: boolean) => browser.waitUntil(
-        () => (element().getText() !== '') !== reverse,
+        () => (getText(element()) !== '') !== reverse,
         ms,
         `Element "${element}" ${reverse ? 'still had text' : 'still had no text'} after ${ms}ms`,
     ),
     'match the text': (element: ElementQuery, ms: number, reverse: boolean, value?: string) => browser.waitUntil(
-        () => (element().getText() === value) !== reverse,
+        () => (getText(element()) === value) !== reverse,
         ms,
         `Text of the element "${element}" did not change within ${ms}ms ${reverse ? 'from' : 'to'} "${value}"`,
     ),

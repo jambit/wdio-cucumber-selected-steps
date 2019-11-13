@@ -1,5 +1,3 @@
-import { ElementQuery } from './elementQuery';
-
 const FIRST_WORD_REGEX = /^[\S]+\s*/;
 const HOST_PART = /http(s?):\/\/[^/]*/;
 
@@ -31,27 +29,33 @@ export const getUrlOrPath = (type: 'url' | 'path') => {
 };
 
 /**
+ * Get the text of an element
+ * @param  element   The element
+ * @returns The element text depending on the specified text method.
+ * @see setupTextMethod()
+ */
+export const getText = global.selectedStepsTextMethod === 'textContent'
+    ? (element: WebdriverIO.Element) => element.getAttribute('textContent')
+    : (element: WebdriverIO.Element) => element.getText();
+
+/**
  * Get the text or value of an element or button
- * @param  type        Element type
- * @param  element   The element query
+ * @param  type      Element type
+ * @param  element   The element
  * @returns The element value if type is not 'button', but the tagname is input, select or textarea. Otherwise the element text.
  */
-export const getTextOrValue = (type: 'element' | 'button', element: ElementQuery) => {
-    let command: 'getText' | 'getValue' = 'getText';
-
-    const foundElement = element();
+export const getTextOrValue = (type: 'element' | 'button', element: WebdriverIO.Element) => {
     if (type !== 'button') {
-        const tagName = foundElement.getTagName().toLowerCase();
+        const tagName = element.getTagName().toLowerCase();
         switch (tagName) {
             case 'input':
             case 'select':
             case 'textarea':
-                command = 'getValue';
-                break;
+                return element.getValue();
             default:
                 break;
         }
     }
 
-    return foundElement[command]().toString();
+    return getText(element);
 };

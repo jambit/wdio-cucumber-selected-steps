@@ -1,0 +1,26 @@
+{
+    "supportFiles": "./src/support/**/*.ts",
+    "stepFiles": "./src/steps/**/*.ts",
+    "executions": [
+        {
+            "file": "./README.md",
+            "template": "./node_modules/@jambit/wdio-cucumber-selected-steps-stepdoc/templates/markdown-short.nj",
+            "replaceStart": "\n# List of included steps\n\n",
+            "replaceEnd": "\n\n# ",
+            "context": {
+                "detailsFile": "STEPS.md"
+            },
+            "options": {
+                "autoescape": false
+            }
+        },
+        {
+            "file": "./STEPS.md",
+            "template": "./node_modules/@jambit/wdio-cucumber-selected-steps-stepdoc/templates/markdown-detailed.nj",
+            "replaceStart": "# Detailed list of included steps\n\n",
+            "options": {
+                "autoescape": false
+            }
+        }
+    ]
+}

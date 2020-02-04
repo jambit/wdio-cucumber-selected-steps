@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "declaration": false,
+    "strict": true,
+    "outDir": "bin",
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "module": "None",
+    "target": "es6"
+  },
+  "include": [
+    "./src"
+  ]
+}

@@ -11,7 +11,7 @@ It is based on the official [boilerplate](https://github.com/webdriverio/cucumbe
   - This makes sentences more readable for non-developers.
   - This allows to change selectors at one place rather than in multiple `.feature` files when the selectors change.
   - You can even combine multiple selector names in the sentences to select child elements.
-    - for example: `'User Table -> User Row X -> Role Coumn` (where each of the parts separated by " -> " are individual selectors)
+    - for example: `'User Table -> User Row X -> Role Column` (where each of the parts separated by " -> " are individual selectors)
 - Values extracted from the regular expression are passed through converters before they are passed to the callback.
   - For example to convert text to boolean, integer or floating point values.
   - `string`, `int`, `float`, `bool`, `selector`, `element` and `elements` are supported out of the box.
@@ -310,6 +310,11 @@ You can even write your own paramTypes. Just have a look at the built-in ones: [
 
 For samples of how steps can look, just take a look at the [src/steps](src/steps) folder of this library. The logic implementation resides in the [src/support](src/support) folder.
 
+## Documenting your own steps
+
+The documentation for the steps included in this project are automatically generated using the package `@jambit/wdio-cucumber-selected-steps-stepdoc`.
+This tool was tailored to be used with this project, but you might be able to use it for your tests as well.
+
 # License
 
-Licensed unter MIT
+Licensed under MIT

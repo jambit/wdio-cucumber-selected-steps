@@ -1,0 +1,32 @@
+All of these steps can be used with `Given`, `When`, `Then` and `And`.
+{% for file in files %}
+## {{file.title}}
+{% for step in file.steps %}
+### `{{step.regex}}`<a name="{{step.anchor}}"></a>
+
+{{step.description}}
+{%- if step.params.length == 0 %}
+
+* **No params**
+{%- else %}
+
+* **ParamTypes:**
+{%- for param in step.params %}
+{%- if param.bool %}
+  * `bool` -> `{{param.bool.matching}}` = `{{param.bool.match}}` and `{{param.bool.notMatching}}` = anything else
+{%- elif param.union %}
+  * `{{param.type}}` -> `{{param.union | join(' | ')}}`
+{%- else %}
+  * `{{param.type}}`
+{%- endif %}
+    * {{param.description}}
+{%- endfor %}
+{%- endif %}
+* **Calls:**
+  * `{{step.functionName}}()`
+{%- if step.options %}
+* **Step options:**
+* `{{step.options}}`
+{%- endif %}
+{% endfor %}
+{%- endfor %}

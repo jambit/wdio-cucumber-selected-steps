@@ -1,7 +1,7 @@
 {
-  "name": "@jambit/wdio-cucumber-selected-steps",
-  "version": "0.8.2",
-  "description": "Cucumber step definition basics for easy import",
+  "name": "@jambit/wdio-cucumber-selected-steps-stepdoc",
+  "version": "0.8.3",
+  "description": "Cucumber step documentation generator for @jambit/wdio-cucumber-selected-steps",
   "homepage": "https://github.com/jambit/wdio-cucumber-selected-steps",
   "bugs": {
     "url": "https://github.com/jambit/wdio-cucumber-selected-steps/issues"
@@ -16,52 +16,38 @@
     "test",
     "selenium",
     "selectors",
-    "steps"
+    "steps",
+    "documentation"
   ],
   "author": "Santo Pfingsten (Jambit GmbH)",
   "license": "MIT",
   "scripts": {
-    "build": "rimraf lib && tsc",
+    "build": "rimraf bin && tsc --build tsconfig.json",
     "eslint": "eslint src --ext ts",
-    "eslint:fix": "eslint src --fix --ext ts",
-    "docs:html": "documentation build src/support/** --parse-extension ts -f html -o docs",
-    "docs:steps": "stepdoc",
-    "docs": "npm run docs:html && npm run docs:steps"
+    "eslint:fix": "eslint src --fix --ext ts"
   },
-  "main": "lib/index.js",
+  "bin": {
+    "stepdoc": "./bin/stepdoc.js"
+  },
+  "main": "bin/stepdoc.js",
   "dependencies": {
+    "documentation": "^12.1.4",
     "@babel/core": "^7.8.3",
     "@babel/preset-env": "^7.8.3",
-    "chai": "^4.2.0",
     "glob": "^7.1.6",
-    "js-yaml": "^3.13.1"
+    "nunjucks": "^3.2.0"
   },
   "devDependencies": {
-    "@jambit/wdio-cucumber-selected-steps-stepdoc": "^0.8.3",
-    "@types/chai": "^4.2.7",
-    "@types/cucumber": "^4.0.7",
     "@types/glob": "^7.1.1",
-    "@types/js-yaml": "^3.12.1",
     "@types/node": "^13.5.0",
     "@types/nunjucks": "^3.1.3",
-    "@types/webdriverio": "^5.0.0",
     "@typescript-eslint/eslint-plugin": "^2.17.0",
     "@typescript-eslint/parser": "^2.17.0",
-    "@wdio/cucumber-framework": "^5.18.6",
-    "@wdio/sync": "^5.18.6",
     "babel-eslint": "^10.0.3",
-    "cucumber": "^5.1.0",
     "eslint": "^6.8.0",
     "eslint-config-airbnb-base": "^14.0.0",
     "eslint-plugin-import": "^2.20.0",
     "rimraf": "^3.0.0",
-    "typescript": "^3.7.5",
-    "webdriverio": "^5.18.6"
-  },
-  "peerDependencies": {
-    "cucumber": "^5.1.0",
-    "webdriverio": "^5.18.6",
-    "@wdio/cucumber-framework": "^5.18.6",
-    "@wdio/sync": "^5.18.6"
+    "typescript": "^3.7.5"
   }
 }

@@ -21,6 +21,9 @@
         "operator-linebreak": ["error", "after", { "overrides": { "?": "before", ":": "before", "+": "before", "&&": "before" } }],
         "import/prefer-default-export": ["off"],
         "import/order": ["off"],
+        "import/extensions": ["error", {
+            "ts": "never"
+        }],
         "indent": ["error", 4, {"SwitchCase": 1}],
         "@typescript-eslint/ban-ts-ignore": "off",
         "@typescript-eslint/no-angle-bracket-type-assertion": "off",

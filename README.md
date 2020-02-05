@@ -19,7 +19,7 @@ It is based on the official [boilerplate](https://github.com/webdriverio/cucumbe
 - Support logic for built-in steps can be reused in custom step definitions.
  - For example you can write a login step definition it can uses the `setValue()` and `click()` support helpers.
 
-# How to use
+# How to Use
 
 ## Requirements
 
@@ -34,7 +34,7 @@ The most important steps are:
 - Install babel (`@babel/core`, `@babel/preset-env` and `@babel/register`)
 - Adjust the wdio.conf.js file (see below)
 
-### wdio.conf.js adjustments
+### wdio.conf.js Adjustments
 ```JavaScript
 // This is needed, since the project uses ES6 modules.
 require("@babel/register")({
@@ -70,7 +70,7 @@ exports.config = {
     },
 ```
 
-#### wdio.conf.js adjustments for text method
+#### wdio.conf.js Adjustments for Text Method
 Additionally, you can configure the text method used. By default, wdio uses `element.getText()`, which will return the transformed text. I.e. if you set your css to upper-case some text, you will get the upper-case version of the text. If you want to get the non-transformed version, you would have to test the attribute `textContent`. To make this more convenient, you can configure the default behavior.
 
 ```JavaScript
@@ -88,7 +88,7 @@ exports.config = {
 
 If you want to use this logic in your custom steps, use our `getText()` helper.
 
-## Creating selector files
+## Creating Selector Files
 
 In `src/selectors` (of course, you can change the path), create `.js` files that export a map as default like this:
 
@@ -108,7 +108,7 @@ The key can be used in `.feature` files wherever `paramType.selector/element/ele
 - `paramType.elements` will pass this value through `elementsQuery()`, which will return a function, that returns `WebdriverIO.Element[]`.
 - `paramType.element` and `paramType.elements` also override `toString()`, so it can easily be used to print out the selector key (i.e. what is written in the `.feature` files ).
 
-## Visual Studio Code support:
+## Visual Studio Code Support:
 
 If you use the [Cucumber (Gherkin) Full Support](https://marketplace.visualstudio.com/items?itemName=alexkrechik.cucumberautocomplete) extension, you can set it up like this:
 ```json
@@ -122,7 +122,7 @@ If you use the [Cucumber (Gherkin) Full Support](https://marketplace.visualstudi
 }
 ```
 
-## Using steps
+## Using Steps
 
 Assuming you know [Gherkin syntax](https://cucumber.io/docs/gherkin/), you should be ready to go. Here is an example:
 ```gherkin
@@ -134,9 +134,10 @@ Assuming you know [Gherkin syntax](https://cucumber.io/docs/gherkin/), you shoul
     Then  ...
 ```
 
-# List of included steps
+# List of Included Steps
 
 All of these steps can be used with `Given`, `When`, `Then` and `And`.
+
 
 ## alert
 
@@ -148,6 +149,7 @@ All of these steps can be used with `Given`, `When`, `Then` and `And`.
 -> Handle an alertbox/confirmbox/prompt
 - [`I enter "([^"]*)" into the prompt`](STEPS.md#alert-step-3)\
 -> Enter text into the current prompt
+
 ## cookies
 
 - [`the cookie "([^"]+)" (has|does not have) the value "([^"]*)"`](STEPS.md#cookies-step-0)\
@@ -158,6 +160,7 @@ All of these steps can be used with `Given`, `When`, `Then` and `And`.
 -> Set a given cookie to a given value. When the cookies does not exist it will be created
 - [`I delete the cookie "([^"]+)"`](STEPS.md#cookies-step-3)\
 -> Delete a cookie
+
 ## delay
 
 - [`I pause for (\d+)ms`](STEPS.md#delay-step-0)\
@@ -166,6 +169,7 @@ All of these steps can be used with `Given`, `When`, `Then` and `And`.
 -> Wait for the given element to be checked, enabled, selected, displayed, contain a text, contain a value or to exist
 - [`I wait(?: (\d+)ms) for the (url|path) to( not)? (contain|match) "([^"]+)"`](STEPS.md#delay-step-2)\
 -> Wait for the url or path to contain or match the specified value
+
 ## elements
 
 - [`the element "([^"]+)" is( not)? displayed`](STEPS.md#elements-step-0)\
@@ -216,6 +220,7 @@ All of these steps can be used with `Given`, `When`, `Then` and `And`.
 -> Select an option from a select element by it's index
 - [`I move to the element "([^"]+)"(?: with an offset of (\d+),(\d+))?`](STEPS.md#elements-step-23)\
 -> Move to the given element with an optional offset on an X and Y position
+
 ## windows
 
 - [`I open the (url|path) "([^"]*)"`](STEPS.md#windows-step-0)\
@@ -241,9 +246,9 @@ All of these steps can be used with `Given`, `When`, `Then` and `And`.
 - [`I focus the last opened (?:window|tab)`](STEPS.md#windows-step-10)\
 -> Focus the last opened window
 
-# Writing your own steps
+# Writing Your Own Steps
 
-## Support helpers
+## Support Helpers
 
 The step definitions above implement their logic in methods found in the [src/support](src/support) folder. These methods can be reused, if you want to write your own step definitions. Have a look at the [docs](https://jambit.github.io/wdio-cucumber-selected-steps/) file for a list of methods.
 
@@ -253,7 +258,7 @@ These methods can be imported like this:
 import { selectOption } from '@jambit/wdio-cucumber-selected-steps/lib/support';
 ```
 
-## Writing your own steps
+## Writing Your Own Steps
 
 Say, you want to do a bit more than just one of the elemental things above. Just write your own step definition to re-use that logic.
 
@@ -310,7 +315,7 @@ You can even write your own paramTypes. Just have a look at the built-in ones: [
 
 For samples of how steps can look, just take a look at the [src/steps](src/steps) folder of this library. The logic implementation resides in the [src/support](src/support) folder.
 
-## Documenting your own steps
+## Documenting Your Own Steps
 
 The documentation for the steps included in this project are automatically generated using the package `@jambit/wdio-cucumber-selected-steps-stepdoc`.
 This tool was tailored to be used with this project, but you might be able to use it for your tests as well.

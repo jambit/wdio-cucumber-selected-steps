@@ -1,6 +1,6 @@
 {
   "name": "@jambit/wdio-cucumber-selected-steps-stepdoc",
-  "version": "0.8.3",
+  "version": "0.8.4",
   "description": "Cucumber step documentation generator for @jambit/wdio-cucumber-selected-steps",
   "homepage": "https://github.com/jambit/wdio-cucumber-selected-steps",
   "bugs": {

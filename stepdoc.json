@@ -5,7 +5,7 @@
         {
             "file": "./README.md",
             "template": "./node_modules/@jambit/wdio-cucumber-selected-steps-stepdoc/templates/markdown-short.nj",
-            "replaceStart": "\n# List of included steps\n\n",
+            "replaceStart": "\n# List of Included Steps\n\n",
             "replaceEnd": "\n\n# ",
             "context": {
                 "detailsFile": "STEPS.md"
@@ -17,7 +17,7 @@
         {
             "file": "./STEPS.md",
             "template": "./node_modules/@jambit/wdio-cucumber-selected-steps-stepdoc/templates/markdown-detailed.nj",
-            "replaceStart": "# Detailed list of included steps\n\n",
+            "replaceStart": "# Detailed List of Included Steps\n\n",
             "options": {
                 "autoescape": false
             }

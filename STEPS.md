@@ -1,4 +1,4 @@
-# Detailed list of included steps
+# Detailed List of Included Steps
 
 All of these steps can be used with `Given`, `When`, `Then` and `And`.
 

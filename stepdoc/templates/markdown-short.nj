@@ -1,5 +1,5 @@
 All of these steps can be used with `Given`, `When`, `Then` and `And`.
-{% for file in files %}
+{%- for file in files %}
 
 ## {{file.title}}
 {% for step in file.steps %}

@@ -138,7 +138,6 @@ Assuming you know [Gherkin syntax](https://cucumber.io/docs/gherkin/), you shoul
 
 All of these steps can be used with `Given`, `When`, `Then` and `And`.
 
-
 ## alert
 
 - [`(an alertbox|a confirmbox|a prompt) (appears|does not appear)`](STEPS.md#alert-step-0)\

@@ -1,6 +1,6 @@
 {
   "name": "@jambit/wdio-cucumber-selected-steps",
-  "version": "0.8.2",
+  "version": "0.8.3",
   "description": "Cucumber step definition basics for easy import",
   "homepage": "https://github.com/jambit/wdio-cucumber-selected-steps",
   "bugs": {

@@ -3,6 +3,7 @@ import fs from 'fs';
 import glob from 'glob';
 import documentation, { Comment } from 'documentation';
 import nunjucks from 'nunjucks';
+import MurmurHash3 from 'imurmurhash';
 import {
     StepDocConfig,
     StepDocExecutionConfig,
@@ -85,7 +86,7 @@ function parseStepFile(file: string, comments: Comment[]): StepFile {
         }
         steps.push({
             regex,
-            anchor: `${title}-step-${steps.length}`,
+            anchor: `${title}-step-${MurmurHash3(regex).result().toString(16)}`,
             params: parseStepParams(paramsStr, comment, functionName),
             description: comment.description.children[0].children[0].value,
             options: optionsAndFunctionsParts.join(',').replace(/\s+/g, ' ').trim(),
@@ -144,11 +145,7 @@ async function run(config: StepDocConfig) {
         const fileData = glob.sync(config.stepFiles).map((file) => parseStepFile(file, comments));
         await Promise.all(config.executions.map((executionConfig) => execute(executionConfig, fileData)));
     } catch (e) {
-        if (e instanceof Error) {
-            console.error(e.stack);
-        } else {
-            console.error(e);
-        }
+        console.error(e);
         process.exit(1);
     }
 }

@@ -140,109 +140,109 @@ All of these steps can be used with `Given`, `When`, `Then` and `And`.
 
 ## alert
 
-- [`(an alertbox|a confirmbox|a prompt) (appears|does not appear)`](STEPS.md#alert-step-0)\
+- [`(an alertbox|a confirmbox|a prompt) (appears|does not appear)`](STEPS.md#alert-step-fa18e8bc)\
 -> Check if a modal was opened
-- [`(an alertbox|a confirmbox|a prompt) (matches|does not match) the text "([^"]*)"`](STEPS.md#alert-step-1)\
+- [`(an alertbox|a confirmbox|a prompt) (matches|does not match) the text "([^"]*)"`](STEPS.md#alert-step-bf6a8a5f)\
 -> Check the text of a modal
-- [`I (accept|dismiss) the (alertbox|confirmbox|prompt)`](STEPS.md#alert-step-2)\
+- [`I (accept|dismiss) the (alertbox|confirmbox|prompt)`](STEPS.md#alert-step-50286141)\
 -> Handle an alertbox/confirmbox/prompt
-- [`I enter "([^"]*)" into the prompt`](STEPS.md#alert-step-3)\
+- [`I enter "([^"]*)" into the prompt`](STEPS.md#alert-step-237c1beb)\
 -> Enter text into the current prompt
 
 ## cookies
 
-- [`the cookie "([^"]+)" (has|does not have) the value "([^"]*)"`](STEPS.md#cookies-step-0)\
+- [`the cookie "([^"]+)" (has|does not have) the value "([^"]*)"`](STEPS.md#cookies-step-66c088e1)\
 -> Check the content of a cookie against a given value
-- [`the cookie "([^"]+)" (exists|does not exist)`](STEPS.md#cookies-step-1)\
+- [`the cookie "([^"]+)" (exists|does not exist)`](STEPS.md#cookies-step-6fddba16)\
 -> Check if a cookie with the given name exists
-- [`I set the cookie "([^"]+)" to "([^"]*)"`](STEPS.md#cookies-step-2)\
+- [`I set the cookie "([^"]+)" to "([^"]*)"`](STEPS.md#cookies-step-b2ef2208)\
 -> Set a given cookie to a given value. When the cookies does not exist it will be created
-- [`I delete the cookie "([^"]+)"`](STEPS.md#cookies-step-3)\
+- [`I delete the cookie "([^"]+)"`](STEPS.md#cookies-step-1a6e1de4)\
 -> Delete a cookie
 
 ## delay
 
-- [`I pause for (\d+)ms`](STEPS.md#delay-step-0)\
+- [`I pause for (\d+)ms`](STEPS.md#delay-step-fdb80b80)\
 -> Pause execution for a given number of milliseconds
-- [`I wait(?: (\d+)ms)? for the (?:link|button|element|checkbox|radio) "([^"]+)"(?: to( not)? (exist|be checked|be enabled|be selected|be displayed|have a text|have a value|match the text|match the value)(?: "([^"]+)")?)?`](STEPS.md#delay-step-1)\
+- [`I wait(?: (\d+)ms)? for the (?:link|button|element|checkbox|radio) "([^"]+)"(?: to( not)? (exist|be checked|be enabled|be selected|be displayed|have a text|have a value|match the text|match the value)(?: "([^"]+)")?)?`](STEPS.md#delay-step-9fe60029)\
 -> Wait for the given element to be checked, enabled, selected, displayed, contain a text, contain a value or to exist
-- [`I wait(?: (\d+)ms) for the (url|path) to( not)? (contain|match) "([^"]+)"`](STEPS.md#delay-step-2)\
+- [`I wait(?: (\d+)ms) for the (url|path) to( not)? (contain|match) "([^"]+)"`](STEPS.md#delay-step-a74e5fe7)\
 -> Wait for the url or path to contain or match the specified value
 
 ## elements
 
-- [`the element "([^"]+)" is( not)? displayed`](STEPS.md#elements-step-0)\
+- [`the element "([^"]+)" is( not)? displayed`](STEPS.md#elements-step-6ff1c921)\
 -> Check if the given element is (not) displayed
-- [`the element "([^"]+)" is( not)? enabled`](STEPS.md#elements-step-1)\
+- [`the element "([^"]+)" is( not)? enabled`](STEPS.md#elements-step-16ea4871)\
 -> Check if the given element is enabled
-- [`the (?:element|checkbox|radio) "([^"]+)" is( not)? selected`](STEPS.md#elements-step-2)\
+- [`the (?:element|checkbox|radio) "([^"]+)" is( not)? selected`](STEPS.md#elements-step-65845e00)\
 -> Check the selected state of the given element
-- [`the element "([^"]+)" (exists|does not exist)(?: exactly (\d+) times)?`](STEPS.md#elements-step-3)\
+- [`the element "([^"]+)" (exists|does not exist)(?: exactly (\d+) times)?`](STEPS.md#elements-step-42fd8dee)\
 -> Check if the given element exists in the DOM one or more times
-- [`the element "([^"]+)" (has|does not have) the same text as the element "([^"]+)"`](STEPS.md#elements-step-4)\
+- [`the element "([^"]+)" (has|does not have) the same text as the element "([^"]+)"`](STEPS.md#elements-step-93d034db)\
 -> Compare the contents of two elements with each other
-- [`the (button|element) "([^"]+)" (matches|does not match) the text "([^"]*)"`](STEPS.md#elements-step-5)\
+- [`the (button|element) "([^"]+)" (matches|does not match) the text "([^"]*)"`](STEPS.md#elements-step-130fe842)\
 -> Check if the given elements text is the same as the given text
-- [`the (button|element) "([^"]+)" (contains|does not contain) the text "([^"]+)"`](STEPS.md#elements-step-6)\
+- [`the (button|element) "([^"]+)" (contains|does not contain) the text "([^"]+)"`](STEPS.md#elements-step-5a76f1c6)\
 -> Check if the given elements contains text
-- [`the (button|element) "([^"]+)" is( not)? empty`](STEPS.md#elements-step-7)\
+- [`the (button|element) "([^"]+)" is( not)? empty`](STEPS.md#elements-step-612c2b2a)\
 -> Check if the given element is empty
-- [`the( css)? attribute "([^"]+)" of the element "([^"]+)" is( not)? "([^"]*)"`](STEPS.md#elements-step-8)\
+- [`the( css)? attribute "([^"]+)" of the element "([^"]+)" is( not)? "([^"]*)"`](STEPS.md#elements-step-3836bd63)\
 -> Check the given property of the given element
-- [`the (width|height) of the element "([^"]+)" is( not)? (\d+)px`](STEPS.md#elements-step-9)\
+- [`the (width|height) of the element "([^"]+)" is( not)? (\d+)px`](STEPS.md#elements-step-2e258bbd)\
 -> Check the dimensions of the given element
-- [`the element "([^"]+)" is( not)? positioned at (\d+)px on the (x|y) axis`](STEPS.md#elements-step-10)\
+- [`the element "([^"]+)" is( not)? positioned at (\d+)px on the (x|y) axis`](STEPS.md#elements-step-9b32e7c8)\
 -> Check the offset of the given element
-- [`the element "([^"]+)" is( not)? within the viewport`](STEPS.md#elements-step-11)\
+- [`the element "([^"]+)" is( not)? within the viewport`](STEPS.md#elements-step-2bd759fb)\
 -> Check if the given element is displayed inside the current viewport
-- [`the element "([^"]+)" (has|does not have) the class "([^"]+)"`](STEPS.md#elements-step-12)\
+- [`the element "([^"]+)" (has|does not have) the class "([^"]+)"`](STEPS.md#elements-step-be35c059)\
 -> Check if the given element has the given class
-- [`the element "([^"]+)" is( not)? focused`](STEPS.md#elements-step-13)\
+- [`the element "([^"]+)" is( not)? focused`](STEPS.md#elements-step-46ce1465)\
 -> Check if the given element has the focus
-- [`I (click|double-click) on the (?:link|button|element|checkbox|radio) "([^"]+)"`](STEPS.md#elements-step-14)\
+- [`I (click|double-click) on the (?:link|button|element|checkbox|radio) "([^"]+)"`](STEPS.md#elements-step-acada9ec)\
 -> Perform a click action on the given element
-- [`I append "([^"]+)" to the inputfield "([^"]+)"`](STEPS.md#elements-step-15)\
+- [`I append "([^"]+)" to the inputfield "([^"]+)"`](STEPS.md#elements-step-87a0511f)\
 -> Add a value to the current element value
-- [`I set the inputfield "([^"]+)" to "([^"]+)"`](STEPS.md#elements-step-16)\
+- [`I set the inputfield "([^"]+)" to "([^"]+)"`](STEPS.md#elements-step-3f31c9a4)\
 -> Set the value of the given input field to a new value
-- [`I clear the inputfield "([^"]+)"`](STEPS.md#elements-step-17)\
+- [`I clear the inputfield "([^"]+)"`](STEPS.md#elements-step-eea5e2da)\
 -> Clear the value of a given input field
-- [`I drag the element "([^"]+)" to the element "([^"]+)"`](STEPS.md#elements-step-18)\
+- [`I drag the element "([^"]+)" to the element "([^"]+)"`](STEPS.md#elements-step-25a8dcfa)\
 -> Drag an element to a given destination
-- [`I press "([^"]+)"`](STEPS.md#elements-step-19)\
+- [`I press "([^"]+)"`](STEPS.md#elements-step-11282daf)\
 -> Perform a key press
-- [`I scroll to the element "([^"]+)"`](STEPS.md#elements-step-20)\
+- [`I scroll to the element "([^"]+)"`](STEPS.md#elements-step-d3153ee9)\
 -> Scroll the page to the given element
-- [`I select the option with the (name|value|text) "([^"]+)" for the element "([^"]+)"`](STEPS.md#elements-step-21)\
+- [`I select the option with the (name|value|text) "([^"]+)" for the element "([^"]+)"`](STEPS.md#elements-step-d3901829)\
 -> Select an option of a select element
-- [`I select the (\d+)(?:st|nd|rd|th) option for the element "([^"]+)"`](STEPS.md#elements-step-22)\
+- [`I select the (\d+)(?:st|nd|rd|th) option for the element "([^"]+)"`](STEPS.md#elements-step-4f726cea)\
 -> Select an option from a select element by it's index
-- [`I move to the element "([^"]+)"(?: with an offset of (\d+),(\d+))?`](STEPS.md#elements-step-23)\
+- [`I move to the element "([^"]+)"(?: with an offset of (\d+),(\d+))?`](STEPS.md#elements-step-81f2ec13)\
 -> Move to the given element with an optional offset on an X and Y position
 
 ## windows
 
-- [`I open the (url|path) "([^"]*)"`](STEPS.md#windows-step-0)\
+- [`I open the (url|path) "([^"]*)"`](STEPS.md#windows-step-fecfca55)\
 -> Open the given URL
-- [`the title (matches|does not match) the text "([^"]*)"`](STEPS.md#windows-step-1)\
+- [`the title (matches|does not match) the text "([^"]*)"`](STEPS.md#windows-step-7c77520a)\
 -> Check the title of the current browser window
-- [`the title (contains|does not contain) the text "([^"]+)"`](STEPS.md#windows-step-2)\
+- [`the title (contains|does not contain) the text "([^"]+)"`](STEPS.md#windows-step-ca32951e)\
 -> Check the title of the current browser window contains expected text/title
-- [`the (url|path) (matches|does not match) "([^"]*)"`](STEPS.md#windows-step-3)\
+- [`the (url|path) (matches|does not match) "([^"]*)"`](STEPS.md#windows-step-6c257b1e)\
 -> Check if the current URL or path matches the given value
-- [`the (url|path) (contains|does not contain) "([^"]+)"`](STEPS.md#windows-step-4)\
+- [`the (url|path) (contains|does not contain) "([^"]+)"`](STEPS.md#windows-step-b0392498)\
 -> Check if the given string is in the URL path
-- [`I set the screen size to (\d+) by (\d+)px`](STEPS.md#windows-step-5)\
+- [`I set the screen size to (\d+) by (\d+)px`](STEPS.md#windows-step-14d6a1a4)\
 -> Resize the browser window
-- [`I close all but the first (?:window|tab)`](STEPS.md#windows-step-6)\
+- [`I close all but the first (?:window|tab)`](STEPS.md#windows-step-9301c911)\
 -> Close all tabs but the first one.
-- [`a new (?:window|tab) (appears|does not appear)`](STEPS.md#windows-step-7)\
+- [`a new (?:window|tab) (appears|does not appear)`](STEPS.md#windows-step-e5d88e61)\
 -> Check if a new window or tab is opened
-- [`the (url|path) "([^"]*)" is opened in a new (?:tab|window)`](STEPS.md#windows-step-8)\
+- [`the (url|path) "([^"]*)" is opened in a new (?:tab|window)`](STEPS.md#windows-step-9b7dd123)\
 -> Check if the given URL or path was opened in a new window
-- [`I close the last opened (?:window|tab)`](STEPS.md#windows-step-9)\
+- [`I close the last opened (?:window|tab)`](STEPS.md#windows-step-f49c4c6f)\
 -> Close the last opened window
-- [`I focus the last opened (?:window|tab)`](STEPS.md#windows-step-10)\
+- [`I focus the last opened (?:window|tab)`](STEPS.md#windows-step-3d2ec86)\
 -> Focus the last opened window
 
 # Writing Your Own Steps

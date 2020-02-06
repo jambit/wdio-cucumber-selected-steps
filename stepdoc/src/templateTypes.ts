@@ -18,7 +18,7 @@ export interface StepFile {
 export interface Step {
     /** The regular expression of the step */
     regex: string;
-    /** An anchor name to be used for linking. Format: `<file-title>-step-<index>` */
+    /** An anchor name to be used for linking. Format: `<file-title>-step-<hash-of-regex>` */
     anchor: string;
     /** The expected parameters */
     params: StepParam[];

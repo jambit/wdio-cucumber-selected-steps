@@ -4,7 +4,7 @@ All of these steps can be used with `Given`, `When`, `Then` and `And`.
 
 ## alert
 
-### `(an alertbox|a confirmbox|a prompt) (appears|does not appear)`<a name="alert-step-0"></a>
+### `(an alertbox|a confirmbox|a prompt) (appears|does not appear)`<a name="alert-step-fa18e8bc"></a>
 
 Check if a modal was opened
 
@@ -16,7 +16,7 @@ Check if a modal was opened
 * **Calls:**
   * `expectAlert()`
 
-### `(an alertbox|a confirmbox|a prompt) (matches|does not match) the text "([^"]*)"`<a name="alert-step-1"></a>
+### `(an alertbox|a confirmbox|a prompt) (matches|does not match) the text "([^"]*)"`<a name="alert-step-bf6a8a5f"></a>
 
 Check the text of a modal
 
@@ -30,7 +30,7 @@ Check the text of a modal
 * **Calls:**
   * `expectAlertText()`
 
-### `I (accept|dismiss) the (alertbox|confirmbox|prompt)`<a name="alert-step-2"></a>
+### `I (accept|dismiss) the (alertbox|confirmbox|prompt)`<a name="alert-step-50286141"></a>
 
 Handle an alertbox/confirmbox/prompt
 
@@ -42,7 +42,7 @@ Handle an alertbox/confirmbox/prompt
 * **Calls:**
   * `handleAlert()`
 
-### `I enter "([^"]*)" into the prompt`<a name="alert-step-3"></a>
+### `I enter "([^"]*)" into the prompt`<a name="alert-step-237c1beb"></a>
 
 Enter text into the current prompt
 
@@ -54,7 +54,7 @@ Enter text into the current prompt
 
 ## cookies
 
-### `the cookie "([^"]+)" (has|does not have) the value "([^"]*)"`<a name="cookies-step-0"></a>
+### `the cookie "([^"]+)" (has|does not have) the value "([^"]*)"`<a name="cookies-step-66c088e1"></a>
 
 Check the content of a cookie against a given value
 
@@ -68,7 +68,7 @@ Check the content of a cookie against a given value
 * **Calls:**
   * `expectCookieValue()`
 
-### `the cookie "([^"]+)" (exists|does not exist)`<a name="cookies-step-1"></a>
+### `the cookie "([^"]+)" (exists|does not exist)`<a name="cookies-step-6fddba16"></a>
 
 Check if a cookie with the given name exists
 
@@ -80,7 +80,7 @@ Check if a cookie with the given name exists
 * **Calls:**
   * `expectCookieExists()`
 
-### `I set the cookie "([^"]+)" to "([^"]*)"`<a name="cookies-step-2"></a>
+### `I set the cookie "([^"]+)" to "([^"]*)"`<a name="cookies-step-b2ef2208"></a>
 
 Set a given cookie to a given value. When the cookies does not exist it will be created
 
@@ -92,7 +92,7 @@ Set a given cookie to a given value. When the cookies does not exist it will be 
 * **Calls:**
   * `setCookie()`
 
-### `I delete the cookie "([^"]+)"`<a name="cookies-step-3"></a>
+### `I delete the cookie "([^"]+)"`<a name="cookies-step-1a6e1de4"></a>
 
 Delete a cookie
 
@@ -104,7 +104,7 @@ Delete a cookie
 
 ## delay
 
-### `I pause for (\d+)ms`<a name="delay-step-0"></a>
+### `I pause for (\d+)ms`<a name="delay-step-fdb80b80"></a>
 
 Pause execution for a given number of milliseconds
 
@@ -114,7 +114,7 @@ Pause execution for a given number of milliseconds
 * **Calls:**
   * `pause()`
 
-### `I wait(?: (\d+)ms)? for the (?:link|button|element|checkbox|radio) "([^"]+)"(?: to( not)? (exist|be checked|be enabled|be selected|be displayed|have a text|have a value|match the text|match the value)(?: "([^"]+)")?)?`<a name="delay-step-1"></a>
+### `I wait(?: (\d+)ms)? for the (?:link|button|element|checkbox|radio) "([^"]+)"(?: to( not)? (exist|be checked|be enabled|be selected|be displayed|have a text|have a value|match the text|match the value)(?: "([^"]+)")?)?`<a name="delay-step-9fe60029"></a>
 
 Wait for the given element to be checked, enabled, selected, displayed, contain a text, contain a value or to exist
 
@@ -134,7 +134,7 @@ Wait for the given element to be checked, enabled, selected, displayed, contain 
 * **Step options:**
 * `{ wrapperOptions: { retry: 3, }, }`
 
-### `I wait(?: (\d+)ms) for the (url|path) to( not)? (contain|match) "([^"]+)"`<a name="delay-step-2"></a>
+### `I wait(?: (\d+)ms) for the (url|path) to( not)? (contain|match) "([^"]+)"`<a name="delay-step-a74e5fe7"></a>
 
 Wait for the url or path to contain or match the specified value
 
@@ -154,7 +154,7 @@ Wait for the url or path to contain or match the specified value
 
 ## elements
 
-### `the element "([^"]+)" is( not)? displayed`<a name="elements-step-0"></a>
+### `the element "([^"]+)" is( not)? displayed`<a name="elements-step-6ff1c921"></a>
 
 Check if the given element is (not) displayed
 
@@ -166,7 +166,7 @@ Check if the given element is (not) displayed
 * **Calls:**
   * `expectDisplayed()`
 
-### `the element "([^"]+)" is( not)? enabled`<a name="elements-step-1"></a>
+### `the element "([^"]+)" is( not)? enabled`<a name="elements-step-16ea4871"></a>
 
 Check if the given element is enabled
 
@@ -178,7 +178,7 @@ Check if the given element is enabled
 * **Calls:**
   * `expectEnabled()`
 
-### `the (?:element|checkbox|radio) "([^"]+)" is( not)? selected`<a name="elements-step-2"></a>
+### `the (?:element|checkbox|radio) "([^"]+)" is( not)? selected`<a name="elements-step-65845e00"></a>
 
 Check the selected state of the given element
 
@@ -190,7 +190,7 @@ Check the selected state of the given element
 * **Calls:**
   * `expectSelected()`
 
-### `the element "([^"]+)" (exists|does not exist)(?: exactly (\d+) times)?`<a name="elements-step-3"></a>
+### `the element "([^"]+)" (exists|does not exist)(?: exactly (\d+) times)?`<a name="elements-step-42fd8dee"></a>
 
 Check if the given element exists in the DOM one or more times
 
@@ -204,7 +204,7 @@ Check if the given element exists in the DOM one or more times
 * **Calls:**
   * `expectExists()`
 
-### `the element "([^"]+)" (has|does not have) the same text as the element "([^"]+)"`<a name="elements-step-4"></a>
+### `the element "([^"]+)" (has|does not have) the same text as the element "([^"]+)"`<a name="elements-step-93d034db"></a>
 
 Compare the contents of two elements with each other
 
@@ -218,7 +218,7 @@ Compare the contents of two elements with each other
 * **Calls:**
   * `expectSameTextAs()`
 
-### `the (button|element) "([^"]+)" (matches|does not match) the text "([^"]*)"`<a name="elements-step-5"></a>
+### `the (button|element) "([^"]+)" (matches|does not match) the text "([^"]*)"`<a name="elements-step-130fe842"></a>
 
 Check if the given elements text is the same as the given text
 
@@ -234,7 +234,7 @@ Check if the given elements text is the same as the given text
 * **Calls:**
   * `expectText()`
 
-### `the (button|element) "([^"]+)" (contains|does not contain) the text "([^"]+)"`<a name="elements-step-6"></a>
+### `the (button|element) "([^"]+)" (contains|does not contain) the text "([^"]+)"`<a name="elements-step-5a76f1c6"></a>
 
 Check if the given elements contains text
 
@@ -250,7 +250,7 @@ Check if the given elements contains text
 * **Calls:**
   * `expectTextContains()`
 
-### `the (button|element) "([^"]+)" is( not)? empty`<a name="elements-step-7"></a>
+### `the (button|element) "([^"]+)" is( not)? empty`<a name="elements-step-612c2b2a"></a>
 
 Check if the given element is empty
 
@@ -264,7 +264,7 @@ Check if the given element is empty
 * **Calls:**
   * `expectEmpty()`
 
-### `the( css)? attribute "([^"]+)" of the element "([^"]+)" is( not)? "([^"]*)"`<a name="elements-step-8"></a>
+### `the( css)? attribute "([^"]+)" of the element "([^"]+)" is( not)? "([^"]*)"`<a name="elements-step-3836bd63"></a>
 
 Check the given property of the given element
 
@@ -282,7 +282,7 @@ Check the given property of the given element
 * **Calls:**
   * `expectProperty()`
 
-### `the (width|height) of the element "([^"]+)" is( not)? (\d+)px`<a name="elements-step-9"></a>
+### `the (width|height) of the element "([^"]+)" is( not)? (\d+)px`<a name="elements-step-2e258bbd"></a>
 
 Check the dimensions of the given element
 
@@ -298,7 +298,7 @@ Check the dimensions of the given element
 * **Calls:**
   * `expectSize()`
 
-### `the element "([^"]+)" is( not)? positioned at (\d+)px on the (x|y) axis`<a name="elements-step-10"></a>
+### `the element "([^"]+)" is( not)? positioned at (\d+)px on the (x|y) axis`<a name="elements-step-9b32e7c8"></a>
 
 Check the offset of the given element
 
@@ -314,7 +314,7 @@ Check the offset of the given element
 * **Calls:**
   * `expectOffset()`
 
-### `the element "([^"]+)" is( not)? within the viewport`<a name="elements-step-11"></a>
+### `the element "([^"]+)" is( not)? within the viewport`<a name="elements-step-2bd759fb"></a>
 
 Check if the given element is displayed inside the current viewport
 
@@ -326,7 +326,7 @@ Check if the given element is displayed inside the current viewport
 * **Calls:**
   * `expectWithinViewport()`
 
-### `the element "([^"]+)" (has|does not have) the class "([^"]+)"`<a name="elements-step-12"></a>
+### `the element "([^"]+)" (has|does not have) the class "([^"]+)"`<a name="elements-step-be35c059"></a>
 
 Check if the given element has the given class
 
@@ -340,7 +340,7 @@ Check if the given element has the given class
 * **Calls:**
   * `expectClass()`
 
-### `the element "([^"]+)" is( not)? focused`<a name="elements-step-13"></a>
+### `the element "([^"]+)" is( not)? focused`<a name="elements-step-46ce1465"></a>
 
 Check if the given element has the focus
 
@@ -352,7 +352,7 @@ Check if the given element has the focus
 * **Calls:**
   * `expectFocus()`
 
-### `I (click|double-click) on the (?:link|button|element|checkbox|radio) "([^"]+)"`<a name="elements-step-14"></a>
+### `I (click|double-click) on the (?:link|button|element|checkbox|radio) "([^"]+)"`<a name="elements-step-acada9ec"></a>
 
 Perform a click action on the given element
 
@@ -364,7 +364,7 @@ Perform a click action on the given element
 * **Calls:**
   * `click()`
 
-### `I append "([^"]+)" to the inputfield "([^"]+)"`<a name="elements-step-15"></a>
+### `I append "([^"]+)" to the inputfield "([^"]+)"`<a name="elements-step-87a0511f"></a>
 
 Add a value to the current element value
 
@@ -376,7 +376,7 @@ Add a value to the current element value
 * **Calls:**
   * `addValue()`
 
-### `I set the inputfield "([^"]+)" to "([^"]+)"`<a name="elements-step-16"></a>
+### `I set the inputfield "([^"]+)" to "([^"]+)"`<a name="elements-step-3f31c9a4"></a>
 
 Set the value of the given input field to a new value
 
@@ -388,7 +388,7 @@ Set the value of the given input field to a new value
 * **Calls:**
   * `setValue()`
 
-### `I clear the inputfield "([^"]+)"`<a name="elements-step-17"></a>
+### `I clear the inputfield "([^"]+)"`<a name="elements-step-eea5e2da"></a>
 
 Clear the value of a given input field
 
@@ -398,7 +398,7 @@ Clear the value of a given input field
 * **Calls:**
   * `clearValue()`
 
-### `I drag the element "([^"]+)" to the element "([^"]+)"`<a name="elements-step-18"></a>
+### `I drag the element "([^"]+)" to the element "([^"]+)"`<a name="elements-step-25a8dcfa"></a>
 
 Drag an element to a given destination
 
@@ -410,7 +410,7 @@ Drag an element to a given destination
 * **Calls:**
   * `dragElement()`
 
-### `I press "([^"]+)"`<a name="elements-step-19"></a>
+### `I press "([^"]+)"`<a name="elements-step-11282daf"></a>
 
 Perform a key press
 
@@ -420,7 +420,7 @@ Perform a key press
 * **Calls:**
   * `pressKey()`
 
-### `I scroll to the element "([^"]+)"`<a name="elements-step-20"></a>
+### `I scroll to the element "([^"]+)"`<a name="elements-step-d3153ee9"></a>
 
 Scroll the page to the given element
 
@@ -430,7 +430,7 @@ Scroll the page to the given element
 * **Calls:**
   * `scrollTo()`
 
-### `I select the option with the (name|value|text) "([^"]+)" for the element "([^"]+)"`<a name="elements-step-21"></a>
+### `I select the option with the (name|value|text) "([^"]+)" for the element "([^"]+)"`<a name="elements-step-d3901829"></a>
 
 Select an option of a select element
 
@@ -444,7 +444,7 @@ Select an option of a select element
 * **Calls:**
   * `selectOption()`
 
-### `I select the (\d+)(?:st|nd|rd|th) option for the element "([^"]+)"`<a name="elements-step-22"></a>
+### `I select the (\d+)(?:st|nd|rd|th) option for the element "([^"]+)"`<a name="elements-step-4f726cea"></a>
 
 Select an option from a select element by it's index
 
@@ -456,7 +456,7 @@ Select an option from a select element by it's index
 * **Calls:**
   * `selectOptionByIndex()`
 
-### `I move to the element "([^"]+)"(?: with an offset of (\d+),(\d+))?`<a name="elements-step-23"></a>
+### `I move to the element "([^"]+)"(?: with an offset of (\d+),(\d+))?`<a name="elements-step-81f2ec13"></a>
 
 Move to the given element with an optional offset on an X and Y position
 
@@ -472,7 +472,7 @@ Move to the given element with an optional offset on an X and Y position
 
 ## windows
 
-### `I open the (url|path) "([^"]*)"`<a name="windows-step-0"></a>
+### `I open the (url|path) "([^"]*)"`<a name="windows-step-fecfca55"></a>
 
 Open the given URL
 
@@ -484,7 +484,7 @@ Open the given URL
 * **Calls:**
   * `openURL()`
 
-### `the title (matches|does not match) the text "([^"]*)"`<a name="windows-step-1"></a>
+### `the title (matches|does not match) the text "([^"]*)"`<a name="windows-step-7c77520a"></a>
 
 Check the title of the current browser window
 
@@ -496,7 +496,7 @@ Check the title of the current browser window
 * **Calls:**
   * `expectTitle()`
 
-### `the title (contains|does not contain) the text "([^"]+)"`<a name="windows-step-2"></a>
+### `the title (contains|does not contain) the text "([^"]+)"`<a name="windows-step-ca32951e"></a>
 
 Check the title of the current browser window contains expected text/title
 
@@ -508,7 +508,7 @@ Check the title of the current browser window contains expected text/title
 * **Calls:**
   * `expectTitleContains()`
 
-### `the (url|path) (matches|does not match) "([^"]*)"`<a name="windows-step-3"></a>
+### `the (url|path) (matches|does not match) "([^"]*)"`<a name="windows-step-6c257b1e"></a>
 
 Check if the current URL or path matches the given value
 
@@ -522,7 +522,7 @@ Check if the current URL or path matches the given value
 * **Calls:**
   * `expectURL()`
 
-### `the (url|path) (contains|does not contain) "([^"]+)"`<a name="windows-step-4"></a>
+### `the (url|path) (contains|does not contain) "([^"]+)"`<a name="windows-step-b0392498"></a>
 
 Check if the given string is in the URL path
 
@@ -536,7 +536,7 @@ Check if the given string is in the URL path
 * **Calls:**
   * `expectURLContains()`
 
-### `I set the screen size to (\d+) by (\d+)px`<a name="windows-step-5"></a>
+### `I set the screen size to (\d+) by (\d+)px`<a name="windows-step-14d6a1a4"></a>
 
 Resize the browser window
 
@@ -548,7 +548,7 @@ Resize the browser window
 * **Calls:**
   * `resizeWindow()`
 
-### `I close all but the first (?:window|tab)`<a name="windows-step-6"></a>
+### `I close all but the first (?:window|tab)`<a name="windows-step-9301c911"></a>
 
 Close all tabs but the first one.
 
@@ -556,7 +556,7 @@ Close all tabs but the first one.
 * **Calls:**
   * `closeAllButFirstTab()`
 
-### `a new (?:window|tab) (appears|does not appear)`<a name="windows-step-7"></a>
+### `a new (?:window|tab) (appears|does not appear)`<a name="windows-step-e5d88e61"></a>
 
 Check if a new window or tab is opened
 
@@ -566,7 +566,7 @@ Check if a new window or tab is opened
 * **Calls:**
   * `expectNewWindow()`
 
-### `the (url|path) "([^"]*)" is opened in a new (?:tab|window)`<a name="windows-step-8"></a>
+### `the (url|path) "([^"]*)" is opened in a new (?:tab|window)`<a name="windows-step-9b7dd123"></a>
 
 Check if the given URL or path was opened in a new window
 
@@ -578,7 +578,7 @@ Check if the given URL or path was opened in a new window
 * **Calls:**
   * `expectNewWindowURL()`
 
-### `I close the last opened (?:window|tab)`<a name="windows-step-9"></a>
+### `I close the last opened (?:window|tab)`<a name="windows-step-f49c4c6f"></a>
 
 Close the last opened window
 
@@ -586,7 +586,7 @@ Close the last opened window
 * **Calls:**
   * `closeLastOpenedWindow()`
 
-### `I focus the last opened (?:window|tab)`<a name="windows-step-10"></a>
+### `I focus the last opened (?:window|tab)`<a name="windows-step-3d2ec86"></a>
 
 Focus the last opened window
 

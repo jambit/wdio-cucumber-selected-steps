@@ -14,8 +14,8 @@ export default (type: 'element' | 'button', element: ElementQuery, reverse: bool
     const contains = text.includes(expectedText);
 
     if (reverse) {
-        failMessage(() => expect(contains).not.toBe(true), `Expected the ${type} "${element}" to not contain the text "${expectedText}"`);
+        failMessage(() => expect(contains).not.toBe(true), `Expected the ${type} "${element}" to not contain the text "${expectedText}", but it does.`);
     } else {
-        failMessage(() => expect(contains).toBe(true), `Expected the ${type} "${element}" to contain the text "${expectedText}"`);
+        failMessage(() => expect(contains).toBe(true), `Expected the ${type} "${element}" to contain the text "${expectedText}", but found "${text}"`);
     }
 };

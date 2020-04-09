@@ -13,8 +13,8 @@ export default (type: 'element' | 'button', element: ElementQuery, reverse: bool
     const text = getTextOrValue(type, element());
 
     if (reverse) {
-        failMessage(() => expect(text).not.toBe(expectedText), `Expected the ${type} "${element}" to not match the text "${expectedText}"`);
+        failMessage(() => expect(text).not.toBe(expectedText), `Expected the ${type} "${element}" to not match the text "${expectedText}", but it does`);
     } else {
-        failMessage(() => expect(text).toBe(expectedText), `Expected the ${type} "${element}" to match the text "${expectedText}"`);
+        failMessage(() => expect(text).toBe(expectedText), `Expected the ${type} "${element}" to match the text "${expectedText}", but found "${text}"`);
     }
 };

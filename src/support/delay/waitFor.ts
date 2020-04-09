@@ -33,6 +33,13 @@ const STATE_HANDLERS = {
             timeoutMsg: `Text of the element "${element}" did not change within ${timeout}ms ${reverse ? 'from' : 'to'} "${value}"`,
         },
     ),
+    'contain the text': (element: ElementQuery, timeout: number, reverse: boolean, value?: string) => browser.waitUntil(
+        () => (getText(element()).includes(value || '')) !== reverse,
+        {
+            timeout,
+            timeoutMsg: `Text of the element "${element}" did not change within ${timeout}ms to ${reverse ? 'not contain' : 'contain'} "${value}"`,
+        },
+    ),
     'have a value': (element: ElementQuery, timeout: number, reverse: boolean) => browser.waitUntil(
         () => (element().getValue() !== '') !== reverse,
         {
@@ -54,12 +61,12 @@ const STATES = Object.keys(STATE_HANDLERS);
 type State = keyof typeof STATE_HANDLERS;
 
 /**
- * Wait for the given element to be checked, enabled, selected, displayed, contain a text, contain a value or to exist
+ * Wait for the given element to be checked, enabled, selected, displayed, match/contain a text, match a value or to exist
  * @param [timeout=3000]    Wait duration (optional)
  * @param element           Element getter
  * @param reverse           Check for opposite state
  * @param [state=exist]     State to check for
- * @param value             The value to check for (in case of "match the text/value")
+ * @param value             The value to check for (in case of "match/contain the text/value")
  *
  * @todo make fallback timeout configurable
  */

@@ -15,7 +15,7 @@ defineTypedStep(
 );
 
 defineTypedStep(
-    /^I wait(?: (\d+)ms)? for the (?:link|button|element|checkbox|radio) "([^"]+)"(?: to( not)? (exist|be checked|be enabled|be selected|be displayed|have a text|have a value|match the text|match the value)(?: "([^"]+)")?)?$/,
+    /^I wait(?: (\d+)ms)? for the (?:link|button|element|checkbox|radio) "([^"]+)"(?: to( not)? (exist|be checked|be enabled|be selected|be displayed|have a text|have a value|match the text|match the value|contain the text)(?: "([^"]+)")?)?$/,
     [
         paramType.int.optional,
         paramType.element,

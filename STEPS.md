@@ -114,9 +114,9 @@ Pause execution for a given number of milliseconds
 * **Calls:**
   * `pause()`
 
-### `I wait(?: (\d+)ms)? for the (?:link|button|element|checkbox|radio) "([^"]+)"(?: to( not)? (exist|be checked|be enabled|be selected|be displayed|have a text|have a value|match the text|match the value)(?: "([^"]+)")?)?`<a name="delay-step-9fe60029"></a>
+### `I wait(?: (\d+)ms)? for the (?:link|button|element|checkbox|radio) "([^"]+)"(?: to( not)? (exist|be checked|be enabled|be selected|be displayed|have a text|have a value|match the text|match the value|contain the text)(?: "([^"]+)")?)?`<a name="delay-step-c682b20d"></a>
 
-Wait for the given element to be checked, enabled, selected, displayed, contain a text, contain a value or to exist
+Wait for the given element to be checked, enabled, selected, displayed, match/contain a text, match a value or to exist
 
 * **ParamTypes:**
   * `int.optional`
@@ -128,7 +128,7 @@ Wait for the given element to be checked, enabled, selected, displayed, contain 
   * `string.optional`
     * State to check for
   * `string.optional`
-    * The value to check for (in case of "match the text/value")
+    * The value to check for (in case of "match/contain the text/value")
 * **Calls:**
   * `waitFor()`
 * **Step options:**

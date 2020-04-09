@@ -164,8 +164,8 @@ All of these steps can be used with `Given`, `When`, `Then` and `And`.
 
 - [`I pause for (\d+)ms`](STEPS.md#delay-step-fdb80b80)\
 -> Pause execution for a given number of milliseconds
-- [`I wait(?: (\d+)ms)? for the (?:link|button|element|checkbox|radio) "([^"]+)"(?: to( not)? (exist|be checked|be enabled|be selected|be displayed|have a text|have a value|match the text|match the value)(?: "([^"]+)")?)?`](STEPS.md#delay-step-9fe60029)\
--> Wait for the given element to be checked, enabled, selected, displayed, contain a text, contain a value or to exist
+- [`I wait(?: (\d+)ms)? for the (?:link|button|element|checkbox|radio) "([^"]+)"(?: to( not)? (exist|be checked|be enabled|be selected|be displayed|have a text|have a value|match the text|match the value|contain the text)(?: "([^"]+)")?)?`](STEPS.md#delay-step-c682b20d)\
+-> Wait for the given element to be checked, enabled, selected, displayed, match/contain a text, match a value or to exist
 - [`I wait(?: (\d+)ms) for the (url|path) to( not)? (contain|match) "([^"]+)"`](STEPS.md#delay-step-a74e5fe7)\
 -> Wait for the url or path to contain or match the specified value
 

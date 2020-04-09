@@ -33,7 +33,7 @@ type State = keyof typeof STATE_HANDLERS;
  * @todo add some tests that use this
  */
 export default (timeout: number | undefined, type: 'url' | 'path', reverse: boolean, state: State, expectedValue: string) => {
-    failMessage(() => expect(STATES).toContain(STATES), `Invalid state: '${state}. Valid states are: ${STATES.join(', ')}'`);
+    failMessage(() => expect(STATES).toContain(state), `Invalid state: '${state}. Valid states are: ${STATES.join(', ')}'`);
     const handler = STATE_HANDLERS[state];
     handler(timeout || 3000, type, reverse, expectedValue);
 };

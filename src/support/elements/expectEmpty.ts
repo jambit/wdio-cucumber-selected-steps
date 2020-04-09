@@ -1,6 +1,6 @@
-import { expect } from 'chai';
 import { getTextOrValue } from '../helpers';
 import { ElementQuery } from '../elementQuery';
+import { failMessage } from '../failMessage';
 
 /**
  * Check if the given element is empty
@@ -12,8 +12,8 @@ export default (type: 'element' | 'button', element: ElementQuery, reverse: bool
     const text = getTextOrValue(type, element());
 
     if (reverse) {
-        expect(text).to.not.equal('');
+        failMessage(() => expect(text).not.toBe(''), `Expected the element "${element}" not to be empty`);
     } else {
-        expect(text).to.equal('');
+        failMessage(() => expect(text).toBe(''), `Expected the element "${element}" to be empty`);
     }
 };

@@ -1,7 +1,7 @@
-import { expect } from 'chai';
 import focusLastOpenedWindow from './focusLastOpenedWindow';
 import expectNewWindow from './expectNewWindow';
 import { getUrlOrPath } from '../helpers';
+import { failMessage } from '../failMessage';
 
 /**
  * Check if the given URL or path was opened in a new window
@@ -14,5 +14,5 @@ export default (type: 'url' | 'path', expectedValue: string) => {
 
     const value = getUrlOrPath(type);
 
-    expect(value).to.equal(expectedValue, `Expected new window to have ${type} ${expectedValue} but was: ${value}`);
+    failMessage(() => expect(value).toBe(expectedValue), `Expected new window to have ${type} "${expectedValue}" but was: "${value}"`);
 };

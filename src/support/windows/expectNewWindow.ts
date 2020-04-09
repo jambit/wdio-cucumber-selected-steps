@@ -1,4 +1,4 @@
-import { expect } from 'chai';
+import { failMessage } from '../failMessage';
 
 /**
  * Check if a new window or tab is opened
@@ -8,8 +8,8 @@ export default (reverse?: boolean) => {
     const windowHandles = browser.getWindowHandles();
 
     if (reverse) {
-        expect(windowHandles.length).to.equal(1, 'A new window has been opened');
+        failMessage(() => expect(windowHandles).toHaveLength(1), 'A new window has been opened');
     } else {
-        expect(windowHandles.length).to.not.equal(1, 'A new window should not have been opened');
+        failMessage(() => expect(windowHandles).not.toHaveLength(1), 'A new window should not have been opened');
     }
 };

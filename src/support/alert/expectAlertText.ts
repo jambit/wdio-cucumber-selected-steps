@@ -1,5 +1,5 @@
-import { assert, expect } from 'chai';
 import { ucFirst, dropFirstWord } from '../helpers';
+import { failMessage } from '../failMessage';
 
 /**
  * Check the text of a modal
@@ -12,14 +12,12 @@ export default (type: 'an alertbox' | 'a confirmbox' | 'a prompt', reverse: bool
         const text = browser.getAlertText();
 
         if (reverse) {
-            expect(text).to.not.equal(expectedText, `Expected the text of the ${dropFirstWord(type)} not to equal "${expectedText}"`);
+            failMessage(() => expect(text).not.toBe(expectedText), `Expected the text of the ${dropFirstWord(type)} not to equal "${expectedText}"`);
         } else {
-            expect(text).to.equal(
-                expectedText,
-                `Expected the text of the ${dropFirstWord(type)} to equal "${expectedText}", instead found "${text}"`,
-            );
+            failMessage(() => expect(text).toBe(expectedText),
+                `Expected the text of the ${dropFirstWord(type)} to equal "${expectedText}", instead found "${text}"`);
         }
     } catch (e) {
-        assert.fail(`${ucFirst(type)} was not opened when it should have been opened`);
+        throw new Error(`${ucFirst(type)} was not opened when it should have been opened`);
     }
 };

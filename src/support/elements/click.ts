@@ -1,5 +1,5 @@
-import { expect } from 'chai';
 import { ElementQuery } from '../elementQuery';
+import { failMessage } from '../failMessage';
 
 const ACTION_HANDLERS = {
     click: (element: ElementQuery) => element().click(),
@@ -15,7 +15,7 @@ type Action = keyof typeof ACTION_HANDLERS;
  * @param element     The element query
  */
 export default (action: Action, element: ElementQuery) => {
-    expect(action).to.be.oneOf(ACTIONS, `Invalid action: '${action}. Valid actions are: ${ACTIONS.join(', ')}'`);
+    failMessage(() => expect(ACTIONS).toContain(action), `Invalid action: '${action}. Valid actions are: ${ACTIONS.join(', ')}'`);
     const handler = ACTION_HANDLERS[action];
     handler(element);
 };

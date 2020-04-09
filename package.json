@@ -1,6 +1,6 @@
 {
   "name": "@jambit/wdio-cucumber-selected-steps",
-  "version": "0.9.0",
+  "version": "1.0.0",
   "description": "Cucumber step definition basics for easy import",
   "keywords": [
     "webdriverio",
@@ -32,41 +32,46 @@
     "docs:html": "documentation build src/support/** --parse-extension ts -f html -o docs",
     "docs:steps": "stepdoc",
     "eslint": "eslint src --ext ts",
-    "eslint:fix": "eslint src --fix --ext ts"
+    "eslint:fix": "eslint src --fix --ext ts",
+    "test": "jest --watch"
   },
   "dependencies": {
     "@babel/core": "^7.9.0",
     "@babel/preset-env": "^7.9.0",
-    "chai": "^4.2.0",
     "glob": "^7.1.6",
+    "jest": "^25.3.0",
     "js-yaml": "^3.13.1"
   },
   "devDependencies": {
     "@jambit/wdio-cucumber-selected-steps-stepdoc": "^0.9.0",
-    "@types/chai": "^4.2.11",
-    "@types/cucumber": "^4.0.7",
+    "@types/cucumber": "^6.0.1",
     "@types/glob": "^7.1.1",
+    "@types/jest": "^25.2.1",
     "@types/js-yaml": "^3.12.3",
-    "@types/node": "^13.11.0",
+    "@types/node": "^13.11.1",
     "@types/nunjucks": "^3.1.3",
     "@types/webdriverio": "^5.0.0",
     "@typescript-eslint/eslint-plugin": "^2.27.0",
     "@typescript-eslint/parser": "^2.27.0",
-    "@wdio/cucumber-framework": "^5.20.0",
-    "@wdio/sync": "^5.20.1",
+    "@wdio/cucumber-framework": "^6.0.14",
+    "@wdio/sync": "^6.0.14",
     "babel-eslint": "^10.1.0",
-    "cucumber": "^5.1.0",
+    "cucumber": "^6.0.5",
     "eslint": "^6.8.0",
     "eslint-config-airbnb-base": "^14.1.0",
     "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-jest": "^23.8.2",
+    "expect-webdriverio": "^1.0.0",
     "rimraf": "^3.0.2",
+    "ts-jest": "^25.3.1",
     "typescript": "^3.8.3",
-    "webdriverio": "^5.22.4"
+    "webdriverio": "^6.0.14"
   },
   "peerDependencies": {
-    "@wdio/cucumber-framework": "^5.20.0",
-    "@wdio/sync": "^5.20.1",
-    "cucumber": "^5.1.0",
-    "webdriverio": "^5.22.4"
+    "@wdio/cucumber-framework": "^6.0.0",
+    "@wdio/sync": "^6.0.0",
+    "cucumber": "^6.0.0",
+    "expect-webdriverio": "^1.0.0",
+    "webdriverio": "^6.0.0"
   }
 }

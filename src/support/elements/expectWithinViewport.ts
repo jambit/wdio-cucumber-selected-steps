@@ -1,5 +1,5 @@
-import { expect } from 'chai';
 import { ElementQuery } from '../elementQuery';
+import { failMessage } from '../failMessage';
 
 /**
  * Check if the given element is displayed inside the current viewport
@@ -10,8 +10,8 @@ export default (element: ElementQuery, reverse: boolean) => {
     const isDisplayed = element().isDisplayedInViewport();
 
     if (reverse) {
-        expect(isDisplayed).to.not.equal(true, `Expected the element "${element}" to be outside the viewport`);
+        failMessage(() => expect(isDisplayed).not.toBe(true), `Expected the element "${element}" to be outside the viewport`);
     } else {
-        expect(isDisplayed).to.equal(true, `Expected the element "${element}" to be inside the viewport`);
+        failMessage(() => expect(isDisplayed).toBe(true), `Expected the element "${element}" to be inside the viewport`);
     }
 };

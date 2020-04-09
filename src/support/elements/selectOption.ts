@@ -1,5 +1,5 @@
-import { expect } from 'chai';
 import { ElementQuery } from '../elementQuery';
+import { failMessage } from '../failMessage';
 
 const TYPE_HANDLERS = {
     name: (element: ElementQuery, value: string) => element().selectByAttribute('name', value),
@@ -17,7 +17,7 @@ type Type = keyof typeof TYPE_HANDLERS;
  * @param element   The element query
  */
 export default (type: Type, value: string, element: ElementQuery) => {
-    expect(type).to.be.oneOf(TYPES, `Invalid type: '${type}'. Valid types are: ${TYPES.join(', ')}'`);
+    failMessage(() => expect(TYPES).toContain(type), `Invalid type: '${type}'. Valid types are: ${TYPES.join(', ')}'`);
     const handler = TYPE_HANDLERS[type];
     handler(element, value);
 };

@@ -23,7 +23,7 @@ It is based on the official [boilerplate](https://github.com/webdriverio/cucumbe
 
 ## Requirements
 
-The [Webdriver.io with Cucumber Framework](https://github.com/webdriverio/) V5.
+[Webdriver.io V6 with Cucumber Framework](https://github.com/webdriverio/).
 
 ## Setup
 

@@ -1,4 +1,4 @@
-import { expect } from 'chai';
+import { failMessage } from '../failMessage';
 
 /**
  * Check the title of the current browser window contains expected text/title
@@ -7,10 +7,11 @@ import { expect } from 'chai';
  */
 export default (reverse: boolean, expectedTitle: string) => {
     const title = browser.getTitle();
+    const contains = title.includes(expectedTitle);
 
     if (reverse) {
-        expect(title).to.not.contain(expectedTitle, `Expected title to not contain "${expectedTitle}"`);
+        failMessage(() => expect(contains).not.toBe(true), `Expected title to not contain "${expectedTitle}"`);
     } else {
-        expect(title).to.contain(expectedTitle, `Expected title to contain "${expectedTitle}" but it didn't: "${title}"`);
+        failMessage(() => expect(contains).toBe(true), `Expected title to contain "${expectedTitle}" but it didn't: "${title}"`);
     }
 };

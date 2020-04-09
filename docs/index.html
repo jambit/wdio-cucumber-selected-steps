@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset='utf-8'>
-  <title>@jambit/wdio-cucumber-selected-steps 0.8.3 | Documentation</title>
+  <title>@jambit/wdio-cucumber-selected-steps 1.0.0 | Documentation</title>
   <meta name='description' content='Cucumber step definition basics for easy import'>
   <meta name='viewport' content='width=device-width,initial-scale=1'>
   <link href='assets/bass.css' rel='stylesheet'>
@@ -15,11 +15,14 @@
       <div id='split-left' class='overflow-auto fs0 height-viewport-100'>
         <div class='py1 px2'>
           <h3 class='mb0 no-anchor'>@jambit/wdio-cucumber-selected-steps</h3>
-          <div class='mb1'><code>0.8.3</code></div>
+          <div class='mb1'><code>1.0.0</code></div>
           <input
             placeholder='Filter'
             id='filter-input'
             class='col12 block input'
+            spellcheck='false'
+            autocapitalize='off'
+            autocorrect='off'
             type='text' />
           <div id='toc'>
             <ul class='list-reset h5 py1-ul'>
@@ -436,6 +439,16 @@
               
                 
                 <li><a
+                  href='#failmessage'
+                  class="">
+                  failMessage
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
                   href='#ucfirst'
                   class="">
                   ucFirst
@@ -826,6 +839,8 @@
   
 
   
+
+  
 </section>
 
           
@@ -889,6 +904,8 @@
         </div>
       
     </div>
+  
+
   
 
   
@@ -977,6 +994,8 @@
   
 
   
+
+  
 </section>
 
           
@@ -1022,6 +1041,8 @@
         </div>
       
     </div>
+  
+
   
 
   
@@ -1101,6 +1122,8 @@
   
 
   
+
+  
 </section>
 
           
@@ -1155,6 +1178,8 @@
         </div>
       
     </div>
+  
+
   
 
   
@@ -1252,6 +1277,8 @@
   
 
   
+
+  
 </section>
 
           
@@ -1306,6 +1333,8 @@
         </div>
       
     </div>
+  
+
   
 
   
@@ -1407,6 +1436,16 @@
   
 
   
+    <div class='py1 quiet mt1 prose-big'>Related</div>
+    
+      
+        paramType
+
+      
+    
+  
+
+  
 
   
 
@@ -1479,6 +1518,8 @@
   
 
   
+
+  
 </section>
 
           
@@ -1499,7 +1540,7 @@
 
   <p>Wait for the given element to be checked, enabled, selected, displayed, contain a text, contain a value or to exist</p>
 
-    <div class='pre p1 fill-light mt0'>waitFor(ms: (<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/undefined">undefined</a>), element: <a href="#elementquery">ElementQuery</a>, reverse: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>, state: State?, value: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>?)</div>
+    <div class='pre p1 fill-light mt0'>waitFor(timeout: (<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/undefined">undefined</a>), element: <a href="#elementquery">ElementQuery</a>, reverse: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>, state: State?, value: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>?)</div>
   
   
 
@@ -1516,7 +1557,7 @@
       
         <div class='space-bottom0'>
           <div>
-            <span class='code bold'>ms</span> <code class='quiet'>((<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/undefined">undefined</a>)
+            <span class='code bold'>timeout</span> <code class='quiet'>((<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/undefined">undefined</a>)
             = <code>3000</code>)</code>
 	    Wait duration (optional)
 
@@ -1579,6 +1620,8 @@
   
 
   
+
+  
 </section>
 
           
@@ -1599,7 +1642,7 @@
 
   <p>Wait for the url or path to contain or match the specified value</p>
 
-    <div class='pre p1 fill-light mt0'>waitForURL(ms: (<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/undefined">undefined</a>), type: (<code>"url"</code> | <code>"path"</code>), reverse: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>, state: State, expectedValue: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</div>
+    <div class='pre p1 fill-light mt0'>waitForURL(timeout: (<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/undefined">undefined</a>), type: (<code>"url"</code> | <code>"path"</code>), reverse: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>, state: State, expectedValue: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</div>
   
   
 
@@ -1616,7 +1659,7 @@
       
         <div class='space-bottom0'>
           <div>
-            <span class='code bold'>ms</span> <code class='quiet'>((<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/undefined">undefined</a>)
+            <span class='code bold'>timeout</span> <code class='quiet'>((<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/undefined">undefined</a>)
             = <code>3000</code>)</code>
 	    Wait duration (optional)
 
@@ -1661,6 +1704,8 @@
         </div>
       
     </div>
+  
+
   
 
   
@@ -1748,6 +1793,8 @@
   
 
   
+
+  
 </section>
 
           
@@ -1818,6 +1865,8 @@
   
 
   
+
+  
 </section>
 
           
@@ -1871,6 +1920,8 @@
   
 
   
+
+  
 </section>
 
           
@@ -1905,6 +1956,8 @@
   
   
   
+  
+
   
 
   
@@ -1995,6 +2048,8 @@
   
 
   
+
+  
 </section>
 
           
@@ -2040,6 +2095,8 @@
         </div>
       
     </div>
+  
+
   
 
   
@@ -2128,6 +2185,8 @@
   
 
   
+
+  
 </section>
 
           
@@ -2182,6 +2241,8 @@
         </div>
       
     </div>
+  
+
   
 
   
@@ -2279,6 +2340,8 @@
   
 
   
+
+  
 </section>
 
           
@@ -2333,6 +2396,8 @@
         </div>
       
     </div>
+  
+
   
 
   
@@ -2430,6 +2495,8 @@
   
 
   
+
+  
 </section>
 
           
@@ -2484,6 +2551,8 @@
         </div>
       
     </div>
+  
+
   
 
   
@@ -2581,6 +2650,8 @@
   
 
   
+
+  
 </section>
 
           
@@ -2635,6 +2706,8 @@
         </div>
       
     </div>
+  
+
   
 
   
@@ -2724,6 +2797,8 @@
         </div>
       
     </div>
+  
+
   
 
   
@@ -2839,6 +2914,8 @@
   
 
   
+
+  
 </section>
 
           
@@ -2869,6 +2946,8 @@ object but we want to assert against a string</p>
   
   
   
+  
+
   
 
   
@@ -2968,6 +3047,8 @@ object but we want to assert against a string</p>
   
 
   
+
+  
 </section>
 
           
@@ -3022,6 +3103,8 @@ object but we want to assert against a string</p>
         </div>
       
     </div>
+  
+
   
 
   
@@ -3128,6 +3211,8 @@ object but we want to assert against a string</p>
   
 
   
+
+  
 </section>
 
           
@@ -3200,6 +3285,8 @@ object but we want to assert against a string</p>
         </div>
       
     </div>
+  
+
   
 
   
@@ -3306,6 +3393,8 @@ object but we want to assert against a string</p>
   
 
   
+
+  
 </section>
 
           
@@ -3377,6 +3466,8 @@ object but we want to assert against a string</p>
   
 
   
+
+  
 </section>
 
           
@@ -3397,7 +3488,7 @@ object but we want to assert against a string</p>
 
   <p>Move to the given element with an optional offset on an X and Y position</p>
 
-    <div class='pre p1 fill-light mt0'>moveTo(element: <a href="#elementquery">ElementQuery</a>, x: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>, y: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</div>
+    <div class='pre p1 fill-light mt0'>moveTo(element: <a href="#elementquery">ElementQuery</a>, xOffset: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>, yOffset: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</div>
   
   
 
@@ -3423,7 +3514,7 @@ object but we want to assert against a string</p>
       
         <div class='space-bottom0'>
           <div>
-            <span class='code bold'>x</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
+            <span class='code bold'>xOffset</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
 	    X coordinate to move to
 
           </div>
@@ -3432,7 +3523,7 @@ object but we want to assert against a string</p>
       
         <div class='space-bottom0'>
           <div>
-            <span class='code bold'>y</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
+            <span class='code bold'>yOffset</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
 	    Y coordinate to move to
 
           </div>
@@ -3440,6 +3531,8 @@ object but we want to assert against a string</p>
         </div>
       
     </div>
+  
+
   
 
   
@@ -3519,6 +3612,8 @@ object but we want to assert against a string</p>
   
 
   
+
+  
 </section>
 
           
@@ -3564,6 +3659,8 @@ object but we want to assert against a string</p>
         </div>
       
     </div>
+  
+
   
 
   
@@ -3661,6 +3758,8 @@ object but we want to assert against a string</p>
   
 
   
+
+  
 </section>
 
           
@@ -3715,6 +3814,8 @@ object but we want to assert against a string</p>
         </div>
       
     </div>
+  
+
   
 
   
@@ -3803,6 +3904,81 @@ object but we want to assert against a string</p>
   
 
   
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='failmessage'>
+      failMessage
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>When an exception has been thrown, this will ensure its message will be changed.</p>
+
+    <div class='pre p1 fill-light mt0'>failMessage</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>fn</span> <code class='quiet'>(function (): void)</code>
+	    A callback that might throw an exception
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>message</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+	    The message that should be set on the error object.
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
 </section>
 
           
@@ -3848,6 +4024,8 @@ object but we want to assert against a string</p>
         </div>
       
     </div>
+  
+
   
 
   
@@ -3927,6 +4105,8 @@ object but we want to assert against a string</p>
   
 
   
+
+  
 </section>
 
           
@@ -3972,6 +4152,8 @@ object but we want to assert against a string</p>
         </div>
       
     </div>
+  
+
   
 
   
@@ -4051,6 +4233,8 @@ object but we want to assert against a string</p>
   
 
   
+
+  
 </section>
 
           
@@ -4105,6 +4289,16 @@ object but we want to assert against a string</p>
       <div class='py1 quiet mt1 prose-big'>Returns</div>
       <code>any</code>:
         The element text depending on the specified text method.
+
+      
+    
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Related</div>
+    
+      
+        setupTextMethod()
 
       
     
@@ -4200,6 +4394,8 @@ object but we want to assert against a string</p>
   
 
   
+
+  
 </section>
 
           
@@ -4229,6 +4425,8 @@ object but we want to assert against a string</p>
   
   
   
+  
+
   
 
   
@@ -4299,6 +4497,8 @@ object but we want to assert against a string</p>
   
 
   
+
+  
     <div class='py1 quiet mt1 prose-big'>Instance Members</div>
     <div class="clearfix">
   
@@ -4330,6 +4530,8 @@ object but we want to assert against a string</p>
   
   
   
+  
+
   
 
   
@@ -4412,6 +4614,8 @@ object but we want to assert against a string</p>
   
 
   
+
+  
     <div class='py1 quiet mt1 prose-big'>Instance Members</div>
     <div class="clearfix">
   
@@ -4462,6 +4666,8 @@ object but we want to assert against a string</p>
       <div class='py1 quiet mt1 prose-big'>Returns</div>
       <code><a href="#paramtypewithoptional">ParamTypeWithOptional</a></code>
     
+  
+
   
 
   
@@ -4527,6 +4733,8 @@ object but we want to assert against a string</p>
       <div class='py1 quiet mt1 prose-big'>Returns</div>
       <code><a href="#paramtypewithoptional">ParamTypeWithOptional</a></code>
     
+  
+
   
 
   
@@ -4619,6 +4827,8 @@ object but we want to assert against a string</p>
   
 
   
+
+  
 </section>
 
           
@@ -4661,6 +4871,8 @@ object but we want to assert against a string</p>
   
 
   
+
+  
     <div class='py1 quiet mt1 prose-big'>Static Members</div>
     <div class="clearfix">
   
@@ -4687,6 +4899,8 @@ object but we want to assert against a string</p>
   
   
   
+  
+
   
 
   
@@ -4753,6 +4967,8 @@ object but we want to assert against a string</p>
   
 
   
+
+  
 </section>
 
       </div>
@@ -4781,6 +4997,8 @@ object but we want to assert against a string</p>
   
   
   
+  
+
   
 
   
@@ -4847,6 +5065,8 @@ object but we want to assert against a string</p>
   
 
   
+
+  
 </section>
 
       </div>
@@ -4875,6 +5095,8 @@ object but we want to assert against a string</p>
   
   
   
+  
+
   
 
   
@@ -4941,6 +5163,8 @@ object but we want to assert against a string</p>
   
 
   
+
+  
 </section>
 
       </div>
@@ -4969,6 +5193,8 @@ object but we want to assert against a string</p>
   
   
   
+  
+
   
 
   
@@ -5050,6 +5276,8 @@ object but we want to assert against a string</p>
   
 
   
+
+  
 </section>
 
           
@@ -5079,6 +5307,8 @@ object but we want to assert against a string</p>
   
   
   
+  
+
   
 
   
@@ -5143,6 +5373,8 @@ object but we want to assert against a string</p>
         </div>
       
     </div>
+  
+
   
 
   
@@ -5231,6 +5463,8 @@ object but we want to assert against a string</p>
   
 
   
+
+  
 </section>
 
           
@@ -5302,6 +5536,8 @@ object but we want to assert against a string</p>
   
 
   
+
+  
 </section>
 
           
@@ -5356,6 +5592,8 @@ object but we want to assert against a string</p>
         </div>
       
     </div>
+  
+
   
 
   
@@ -5453,6 +5691,8 @@ object but we want to assert against a string</p>
   
 
   
+
+  
 </section>
 
           
@@ -5533,6 +5773,8 @@ object but we want to assert against a string</p>
   
 
   
+
+  
 </section>
 
           
@@ -5562,6 +5804,8 @@ object but we want to assert against a string</p>
   
   
   
+  
+
   
 
   
@@ -5652,6 +5896,8 @@ object but we want to assert against a string</p>
   
 
   
+
+  
 </section>
 
           
@@ -5706,6 +5952,8 @@ object but we want to assert against a string</p>
         </div>
       
     </div>
+  
+
   
 
   

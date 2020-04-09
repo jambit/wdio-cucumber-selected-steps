@@ -1,5 +1,5 @@
-import { expect } from 'chai';
 import { ElementQuery } from '../elementQuery';
+import { failMessage } from '../failMessage';
 
 /**
  * Check if the given element is enabled
@@ -7,11 +7,9 @@ import { ElementQuery } from '../elementQuery';
  * @param reverse   Check for opposite state
  */
 export default (element: ElementQuery, reverse: boolean) => {
-    const isEnabled = element().isEnabled();
-
     if (reverse) {
-        expect(isEnabled).to.not.equal(true, `Expected the element "${element}" not to be enabled`);
+        failMessage(() => expect(element()).not.toBeEnabled(), `Expected the element "${element}" not to be enabled`);
     } else {
-        expect(isEnabled).to.equal(true, `Expected the element "${element}" to be enabled`);
+        failMessage(() => expect(element()).toBeEnabled(), `Expected the element "${element}" to be enabled`);
     }
 };

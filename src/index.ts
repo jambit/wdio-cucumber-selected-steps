@@ -4,13 +4,11 @@ import path from 'path';
 import glob from 'glob';
 import fs from 'fs';
 import yaml from 'js-yaml';
-import { assert } from 'chai';
 
 interface SelectorMap {
     [s: string]: string | Function;
 }
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const mappers: { [s: string]: (file: string) => SelectorMap } = {
     js: (file) => require(file).default,
     json: (file) => JSON.parse(fs.readFileSync(file, 'utf8')),
@@ -28,7 +26,7 @@ export const setupSelectors = (patterns: string[]) => {
             const extension = file.split('.').pop()!;
             const mapper = mappers[extension];
             if (!mapper) {
-                throw new Error(`Unknown file type for selector file: ${file}`);
+                throw new Error(`Unknown file type for selector file: "${file}"`);
             }
             return mapper(path.join(cwd, file));
         });
@@ -36,7 +34,9 @@ export const setupSelectors = (patterns: string[]) => {
     const selectors: SelectorMap = Object.assign({}, ...importedSelectors);
     global.getSelector = (key) => {
         const selector = selectors[key];
-        assert.exists(selector, `Missing selector definition for "${key}"`);
+        if (!selector) {
+            throw new Error(`Missing selector definition for "${key}"`);
+        }
         return selector;
     };
     return global.getSelector;

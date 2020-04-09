@@ -1,4 +1,4 @@
-import { expect } from 'chai';
+import { failMessage } from '../failMessage';
 
 /**
  * Check the content of a cookie against a given value
@@ -9,13 +9,14 @@ import { expect } from 'chai';
 export default (name: string, reverse: boolean, expectedValue: string) => {
     const cookies = browser.getCookies([name]);
 
-    expect(cookies).to.have.length(1, `Expected exactly one cookie with name "${name}"`);
+    failMessage(() => expect(cookies).toHaveLength(1), `Expected exactly one cookie with name "${name}"`);
     const cookie = cookies[0];
-    expect(cookie.name).to.equal(name, `Cookie name should be "${name}"`);
+    failMessage(() => expect(cookie.name).toBe(name), `Cookie name should be "${name}"`);
 
     if (reverse) {
-        expect(cookie.value).to.not.equal(expectedValue, `expected cookie "${name}" not to have value "${expectedValue}"`);
+        failMessage(() => expect(cookie.value).not.toBe(expectedValue), `expected cookie "${name}" not to have value "${expectedValue}"`);
     } else {
-        expect(cookie.value).to.equal(expectedValue, `expected cookie "${name}" to have value "${expectedValue}" but got "${cookie.value}"`);
+        failMessage(() => expect(cookie.value).toBe(expectedValue),
+            `expected cookie "${name}" to have value "${expectedValue}" but got "${cookie.value}"`);
     }
 };

@@ -1,5 +1,5 @@
-import { expect } from 'chai';
 import { ElementQuery } from '../elementQuery';
+import { failMessage } from '../failMessage';
 
 /**
  * Check the dimensions of the given element
@@ -12,11 +12,9 @@ export default (dimension: 'width' | 'height', element: ElementQuery, reverse: b
     const elementSize = element().getSize()[dimension];
 
     if (reverse) {
-        expect(elementSize).to.not.equal(expectedSize, `The element "${element}" should not have a ${dimension} of ${expectedSize}px`);
+        failMessage(() => expect(elementSize).not.toBe(expectedSize), `The element "${element}" should not have a ${dimension} of ${expectedSize}px`);
     } else {
-        expect(elementSize).to.equal(
-            expectedSize,
-            `The element "${element}" should have a ${dimension} of ${expectedSize}px, but is ${elementSize}px`,
-        );
+        failMessage(() => expect(elementSize).toBe(expectedSize),
+            `The element "${element}" should have a ${dimension} of ${expectedSize}px, but is ${elementSize}px`);
     }
 };

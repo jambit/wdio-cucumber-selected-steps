@@ -1,5 +1,3 @@
-import { expect } from 'chai';
-
 // fixme: support for react$ and react$$, possibly by allowing selectors to be an object like this as well:
 // { selector: '...', state?: {...}, props?: {...} }
 
@@ -17,8 +15,7 @@ export function elementQuery(name: string) {
         const names = name.split(separator);
         const selectors = names.map((name2) => getSelector(name2));
         let selector = selectors.shift();
-        // eslint-disable-next-line no-unused-expressions
-        expect(selector).to.exist;
+        expect(selector).toBeTruthy();
         let element: WebdriverIO.Element | null = null;
         do {
             element = (element || browser).$(selector!);
@@ -49,7 +46,7 @@ function selectNodes(sourceElements: WebdriverIO.Element[], remainingSelectors: 
 export function elementsQuery(name: string) {
     const query = () => {
         const names = name.split(separator);
-        expect(names).to.have.lengthOf.at.least(1);
+        expect(names.length).toBeGreaterThan(0);
         const selectors = names.map((name2) => getSelector(name2));
         const selector = selectors.shift()!;
         return selectNodes($$(selector), selectors);

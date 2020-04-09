@@ -1,5 +1,5 @@
-import { expect } from 'chai';
 import { ElementQuery } from '../elementQuery';
+import { failMessage } from '../failMessage';
 
 /**
  * Check the selected state of the given element
@@ -10,8 +10,8 @@ export default (element: ElementQuery, reverse: boolean) => {
     const isSelected = element().isSelected();
 
     if (reverse) {
-        expect(isSelected).to.not.equal(true, `Expected the element "${element}" to not be selected`);
+        failMessage(() => expect(isSelected).not.toBe(true), `Expected the element "${element}" to not be selected`);
     } else {
-        expect(isSelected).to.equal(true, `Expected the element "${element}" to be selected`);
+        failMessage(() => expect(isSelected).toBe(true), `Expected the element "${element}" to be selected`);
     }
 };

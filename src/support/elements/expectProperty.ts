@@ -1,5 +1,5 @@
-import { expect } from 'chai';
 import { ElementQuery } from '../elementQuery';
+import { failMessage } from '../failMessage';
 
 /**
  * Check the given property of the given element
@@ -26,14 +26,10 @@ export default (checkCSS: boolean, attrName: string, element: ElementQuery, reve
     attributeValue = attributeValue.toString();
 
     if (reverse) {
-        expect(attributeValue).to.not.equal(
-            expectedValue,
-            `${attrType}: ${attrName} of the element "${element}" should not match "${expectedValue}"`,
-        );
+        failMessage(() => expect(attributeValue).not.toBe(expectedValue),
+            `${attrType} "${attrName}" of the element "${element}" should not match "${expectedValue}"`);
     } else {
-        expect(attributeValue).to.equal(
-            expectedValue,
-            `${attrType}: ${attrName} of the element "${element}" should match "${expectedValue}", but is "${attributeValue}"`,
-        );
+        failMessage(() => expect(attributeValue).toBe(expectedValue),
+            `${attrType} "${attrName}" of the element "${element}" should match "${expectedValue}", but is "${attributeValue}"`);
     }
 };

@@ -1,5 +1,5 @@
-import { expect } from 'chai';
 import { getUrlOrPath } from '../helpers';
+import { failMessage } from '../failMessage';
 
 /**
  * Check if the current URL or path matches the given value
@@ -11,8 +11,8 @@ export default (type: 'url' | 'path', reverse: boolean, expectedValue: string) =
     const value = getUrlOrPath(type);
 
     if (reverse) {
-        expect(value).to.not.equal(expectedValue, `expected ${type} to not be "${value}"`);
+        failMessage(() => expect(value).not.toBe(expectedValue), `expected ${type} to not be "${value}"`);
     } else {
-        expect(value).to.equal(expectedValue, `expected ${type} to be "${expectedValue}" but was "${value}"`);
+        failMessage(() => expect(value).toBe(expectedValue), `expected ${type} to be "${expectedValue}" but was "${value}"`);
     }
 };

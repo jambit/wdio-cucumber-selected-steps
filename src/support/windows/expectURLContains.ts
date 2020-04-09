@@ -1,5 +1,5 @@
-import { expect } from 'chai';
 import { getUrlOrPath } from '../helpers';
+import { failMessage } from '../failMessage';
 
 /**
  * Check if the given string is in the URL path
@@ -9,10 +9,11 @@ import { getUrlOrPath } from '../helpers';
  */
 export default (type: 'url' | 'path', reverse: boolean, expectedPart: string) => {
     const value = getUrlOrPath(type);
+    const contains = value.includes(expectedPart);
 
     if (reverse) {
-        expect(value).to.not.contain(expectedPart, `Expected ${type} "${value}" to not contain "${expectedPart}"`);
+        failMessage(() => expect(contains).not.toBe(true), `Expected ${type} "${value}" to not contain "${expectedPart}"`);
     } else {
-        expect(value).to.contain(expectedPart, `Expected ${type} "${value}" to contain "${expectedPart}"`);
+        failMessage(() => expect(contains).toBe(true), `Expected ${type} "${value}" to contain "${expectedPart}"`);
     }
 };

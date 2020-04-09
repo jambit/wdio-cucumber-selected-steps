@@ -1,5 +1,5 @@
-import { expect } from 'chai';
 import { ElementQuery } from '../elementQuery';
+import { failMessage } from '../failMessage';
 
 /**
  * Check if the given element is (not) displayed
@@ -7,11 +7,9 @@ import { ElementQuery } from '../elementQuery';
  * @param reverse   Check for opposite state
  */
 export default (element: ElementQuery, reverse: boolean) => {
-    const isDisplayed = element().isDisplayed();
-
     if (reverse) {
-        expect(isDisplayed).to.not.equal(true, `Expected the element "${element}" not to be displayed`);
+        failMessage(() => expect(element()).not.toBeDisplayed(), `Expected the element "${element}" not to be displayed`);
     } else {
-        expect(isDisplayed).to.equal(true, `Expected the element "${element}" to be displayed`);
+        failMessage(() => expect(element()).toBeDisplayed(), `Expected the element "${element}" to be displayed`);
     }
 };

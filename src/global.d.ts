@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 declare function getSelector(value: string): string | Function;
 declare const selectedStepsTextMethod: 'getText' | 'textContent';
 

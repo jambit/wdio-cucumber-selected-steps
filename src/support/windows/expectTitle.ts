@@ -1,4 +1,4 @@
-import { expect } from 'chai';
+import { failMessage } from '../failMessage';
 
 /**
  * Check the title of the current browser window
@@ -9,8 +9,8 @@ export default (reverse: boolean, expectedTitle: string) => {
     const title = browser.getTitle();
 
     if (reverse) {
-        expect(title).to.not.equal(expectedTitle, `Expected title to not be "${expectedTitle}"`);
+        failMessage(() => expect(title).not.toBe(expectedTitle), `Expected title to not be "${expectedTitle}"`);
     } else {
-        expect(title).to.equal(expectedTitle, `Expected title to be "${expectedTitle}" but was "${title}"`);
+        failMessage(() => expect(title).toBe(expectedTitle), `Expected title to be "${expectedTitle}" but was "${title}"`);
     }
 };

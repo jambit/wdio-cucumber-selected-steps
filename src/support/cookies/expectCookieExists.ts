@@ -1,4 +1,4 @@
-import { expect } from 'chai';
+import { failMessage } from '../failMessage';
 
 /**
  * Check if a cookie with the given name exists
@@ -9,8 +9,8 @@ export default (name: string, reverse: boolean) => {
     const cookies = browser.getCookies([name]);
 
     if (reverse) {
-        expect(cookies).to.have.length(0, `Expected cookie "${name}" not to exists but it does`);
+        failMessage(() => expect(cookies).toHaveLength(0), `Expected cookie "${name}" not to exists but it does`);
     } else {
-        expect(cookies).to.have.length(1, `Expected cookie "${name}" to exists but it does not`);
+        failMessage(() => expect(cookies).toHaveLength(1), `Expected cookie "${name}" to exists but it does not`);
     }
 };

@@ -1,6 +1,6 @@
-import { expect } from 'chai';
 import { getTextOrValue } from '../helpers';
 import { ElementQuery } from '../elementQuery';
+import { failMessage } from '../failMessage';
 
 /**
  * Check if the given elements contains text
@@ -11,10 +11,11 @@ import { ElementQuery } from '../elementQuery';
  */
 export default (type: 'element' | 'button', element: ElementQuery, reverse: boolean, expectedText: string) => {
     const text = getTextOrValue(type, element());
+    const contains = text.includes(expectedText);
 
     if (reverse) {
-        expect(text).to.not.contain(expectedText);
+        failMessage(() => expect(contains).not.toBe(true), `Expected the ${type} "${element}" to not contain the text "${expectedText}"`);
     } else {
-        expect(text).to.contain(expectedText);
+        failMessage(() => expect(contains).toBe(true), `Expected the ${type} "${element}" to contain the text "${expectedText}"`);
     }
 };

@@ -1,5 +1,5 @@
-import { expect } from 'chai';
 import { ElementQuery } from '../elementQuery';
+import { failMessage } from '../failMessage';
 
 /**
  * Check if the given element has the focus
@@ -7,11 +7,9 @@ import { ElementQuery } from '../elementQuery';
  * @param reverse   Check for opposite state
  */
 export default (element: ElementQuery, reverse: boolean) => {
-    const isFocused = element().isFocused();
-
     if (reverse) {
-        expect(isFocused).to.not.equal(true, `Expected the element "${element}" to not be focused, but it is`);
+        failMessage(() => expect(element()).not.toBeFocused(), `Expected the element "${element}" to not be focused, but it is`);
     } else {
-        expect(isFocused).to.equal(true, `Expected the element "${element}" to not be focused, but it is`);
+        failMessage(() => expect(element()).toBeFocused(), `Expected the element "${element}" to not be focused, but it is`);
     }
 };

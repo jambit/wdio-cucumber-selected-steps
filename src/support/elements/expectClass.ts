@@ -1,5 +1,5 @@
-import { expect } from 'chai';
 import { ElementQuery } from '../elementQuery';
+import { failMessage } from '../failMessage';
 
 /**
  * Check if the given element has the given class
@@ -11,8 +11,10 @@ export default (element: ElementQuery, reverse: boolean, expectedClassName: stri
     const classesList = element().getAttribute('className').split(' ');
 
     if (reverse) {
-        expect(classesList).to.not.include(expectedClassName, `Element "${element}" should not have the class "${expectedClassName}"`);
+        failMessage(() => expect(classesList).not.toContain(expectedClassName),
+            `Element "${element}" should not have the class "${expectedClassName}"`);
     } else {
-        expect(classesList).to.include(expectedClassName, `Element "${element}" should have the class "${expectedClassName}"`);
+        failMessage(() => expect(classesList).toContain(expectedClassName),
+            `Element "${element}" should have the class "${expectedClassName}"`);
     }
 };

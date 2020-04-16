@@ -16,7 +16,7 @@ import {
 } from './templateTypes';
 
 const STEP_REGEX = /\/\^([^$/]*)\$\/,\s*\[([^\]]*)\],([^);]*)\);/g;
-const PARAMS_REGEX = /paramType\.([^,]*),/g;
+const PARAMS_REGEX = /paramType\.([^,]*),?/g;
 const SET_BOOL_REGEX = /^bool\.set(True|False)\(([^)]+)\)$/;
 const FILE_TITLE_REGEX = /^.*\/(.*)\.ts$/;
 

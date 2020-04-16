@@ -43,7 +43,7 @@
     "js-yaml": "^3.13.1"
   },
   "devDependencies": {
-    "@jambit/wdio-cucumber-selected-steps-stepdoc": "^0.9.0",
+    "@jambit/wdio-cucumber-selected-steps-stepdoc": "^0.9.1",
     "@types/cucumber": "^6.0.1",
     "@types/glob": "^7.1.1",
     "@types/jest": "^25.2.1",

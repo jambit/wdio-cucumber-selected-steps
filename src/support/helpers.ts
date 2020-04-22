@@ -34,9 +34,10 @@ export const getUrlOrPath = (type: 'url' | 'path') => {
  * @returns The element text depending on the specified text method.
  * @see setupTextMethod()
  */
-export const getText = global.selectedStepsTextMethod === 'textContent'
-    ? (element: WebdriverIO.Element) => element.getAttribute('textContent')
-    : (element: WebdriverIO.Element) => element.getText();
+export const getText =
+    global.selectedStepsTextMethod === 'textContent'
+        ? (element: WebdriverIO.Element) => element.getProperty('textContent') as string
+        : (element: WebdriverIO.Element) => element.getText();
 
 /**
  * Get the text or value of an element or button

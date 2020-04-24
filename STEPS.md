@@ -134,7 +134,7 @@ Wait for the given element to be checked, enabled, selected, displayed, match/co
 * **Step options:**
 * `{ wrapperOptions: { retry: 3, }, }`
 
-### `I wait(?: (\d+)ms) for the (url|path) to( not)? (contain|match) "([^"]+)"`<a name="delay-step-a74e5fe7"></a>
+### `I wait(?: (\d+)ms)? for the (url|path) to( not)? (contain|match) "([^"]+)"`<a name="delay-step-30adba18"></a>
 
 Wait for the url or path to contain or match the specified value
 

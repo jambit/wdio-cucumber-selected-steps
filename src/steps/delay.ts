@@ -32,7 +32,7 @@ defineTypedStep(
 );
 
 defineTypedStep(
-    /^I wait(?: (\d+)ms) for the (url|path) to( not)? (contain|match) "([^"]+)"$/,
+    /^I wait(?: (\d+)ms)? for the (url|path) to( not)? (contain|match) "([^"]+)"$/,
     [
         paramType.int,
         paramType.string,

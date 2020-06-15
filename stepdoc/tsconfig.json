@@ -5,7 +5,7 @@
     "outDir": "bin",
     "esModuleInterop": true,
     "moduleResolution": "node",
-    "module": "None",
+    "module": "CommonJS",
     "target": "es6"
   },
   "include": [

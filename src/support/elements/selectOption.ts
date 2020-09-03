@@ -16,7 +16,7 @@ type Type = keyof typeof TYPE_HANDLERS;
  * @param value     Value to select by
  * @param element   The element query
  */
-export default (type: Type, value: string, element: ElementQuery) => {
+export default (type: Type, value: string, element: ElementQuery): void => {
     failMessage(() => expect(TYPES).toContain(type), `Invalid type: '${type}'. Valid types are: ${TYPES.join(', ')}'`);
     const handler = TYPE_HANDLERS[type];
     handler(element, value);

@@ -9,7 +9,7 @@ import { failMessage } from '../failMessage';
  * @param reverse       Check for opposite state
  * @param expectedText  The text to validate against
  */
-export default (type: 'element' | 'button', element: ElementQuery, reverse: boolean, expectedText: string) => {
+export default (type: 'element' | 'button', element: ElementQuery, reverse: boolean, expectedText: string): void => {
     const text = getTextOrValue(type, element());
 
     if (reverse) {

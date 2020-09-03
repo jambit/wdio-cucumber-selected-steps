@@ -6,4 +6,4 @@ import { ElementQuery } from '../elementQuery';
  * @param xOffset   X coordinate to move to
  * @param yOffset   Y coordinate to move to
  */
-export default (element: ElementQuery, xOffset: number, yOffset: number) => element().moveTo({ xOffset, yOffset });
+export default (element: ElementQuery, xOffset: number, yOffset: number): void => element().moveTo({ xOffset, yOffset });

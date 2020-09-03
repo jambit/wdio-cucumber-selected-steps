@@ -7,7 +7,7 @@ import { failMessage } from '../failMessage';
  * @param reverse       Check for opposite state
  * @param expectedPart  The string to check for
  */
-export default (type: 'url' | 'path', reverse: boolean, expectedPart: string) => {
+export default (type: 'url' | 'path', reverse: boolean, expectedPart: string): void => {
     const value = getUrlOrPath(type);
     const contains = value.includes(expectedPart);
 

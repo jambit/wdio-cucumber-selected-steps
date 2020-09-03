@@ -70,7 +70,7 @@ type State = keyof typeof STATE_HANDLERS;
  *
  * @todo make fallback timeout configurable
  */
-export default (timeout: number | undefined, element: ElementQuery, reverse: boolean, state?: State, value?: string) => {
+export default (timeout: number | undefined, element: ElementQuery, reverse: boolean, state?: State, value?: string): void => {
     if (state) {
         failMessage(() => expect(STATES).toContain(state), `Invalid state: '${state}. Valid states are: ${STATES.join(', ')}'`);
     }

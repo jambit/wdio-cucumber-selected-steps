@@ -8,7 +8,7 @@ import { failMessage } from '../failMessage';
  * @param reverse   Check for opposite state
  * @param element2  The element query for the second element
  */
-export default (element1: ElementQuery, reverse: boolean, element2: ElementQuery) => {
+export default (element1: ElementQuery, reverse: boolean, element2: ElementQuery): void => {
     const text1 = getText(element1());
     const text2 = getText(element2());
 

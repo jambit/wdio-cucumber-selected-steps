@@ -32,7 +32,7 @@ type State = keyof typeof STATE_HANDLERS;
  * @todo make fallback timeout configurable
  * @todo add some tests that use this
  */
-export default (timeout: number | undefined, type: 'url' | 'path', reverse: boolean, state: State, expectedValue: string) => {
+export default (timeout: number | undefined, type: 'url' | 'path', reverse: boolean, state: State, expectedValue: string): void => {
     failMessage(() => expect(STATES).toContain(state), `Invalid state: "${state}". Valid states are: ${STATES.join(', ')}'`);
     const handler = STATE_HANDLERS[state];
     handler(timeout || 3000, type, reverse, expectedValue);

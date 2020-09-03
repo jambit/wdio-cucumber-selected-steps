@@ -3,4 +3,4 @@
  * @param name    The name of the cookie
  * @param value   The value of the cookie
  */
-export default (name: string, value: string) => browser.setCookies({ name, value });
+export default (name: string, value: string): void => browser.setCookies({ name, value });

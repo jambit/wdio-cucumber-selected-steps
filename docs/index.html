@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset='utf-8'>
-  <title>@jambit/wdio-cucumber-selected-steps 1.0.5 | Documentation</title>
+  <title>@jambit/wdio-cucumber-selected-steps 1.0.7 | Documentation</title>
   <meta name='description' content='Cucumber step definition basics for easy import'>
   <meta name='viewport' content='width=device-width,initial-scale=1'>
   <link href='assets/bass.css' rel='stylesheet'>
@@ -15,7 +15,7 @@
       <div id='split-left' class='overflow-auto fs0 height-viewport-100'>
         <div class='py1 px2'>
           <h3 class='mb0 no-anchor'>@jambit/wdio-cucumber-selected-steps</h3>
-          <div class='mb1'><code>1.0.5</code></div>
+          <div class='mb1'><code>1.0.7</code></div>
           <input
             placeholder='Filter'
             id='filter-input'
@@ -151,6 +151,16 @@
                 <li><a
                   href='#elementquery'
                   class="">
+                  ElementQuery
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#elementquery'
+                  class="">
                   elementQuery
                   
                 </a>
@@ -161,17 +171,7 @@
                 <li><a
                   href='#elementsquery'
                   class="">
-                  elementsQuery
-                  
-                </a>
-                
-                </li>
-              
-                
-                <li><a
-                  href='#elementquery'
-                  class="">
-                  ElementQuery
+                  ElementsQuery
                   
                 </a>
                 
@@ -181,7 +181,7 @@
                 <li><a
                   href='#elementsquery'
                   class="">
-                  ElementsQuery
+                  elementsQuery
                   
                 </a>
                 
@@ -788,7 +788,7 @@
 
   <p>Check if a modal was opened</p>
 
-    <div class='pre p1 fill-light mt0'>expectAlert(type: (<code>"an alertbox"</code> | <code>"a confirmbox"</code> | <code>"a prompt"</code>), reverse: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>)</div>
+    <div class='pre p1 fill-light mt0'>expectAlert(type: (<code>"an alertbox"</code> | <code>"a confirmbox"</code> | <code>"a prompt"</code>), reverse: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>): void</div>
   
   
 
@@ -827,6 +827,11 @@
   
 
   
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>void</code>
+    
+  
 
   
 
@@ -861,7 +866,7 @@
 
   <p>Check the text of a modal</p>
 
-    <div class='pre p1 fill-light mt0'>expectAlertText(type: (<code>"an alertbox"</code> | <code>"a confirmbox"</code> | <code>"a prompt"</code>), reverse: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>, expectedText: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</div>
+    <div class='pre p1 fill-light mt0'>expectAlertText(type: (<code>"an alertbox"</code> | <code>"a confirmbox"</code> | <code>"a prompt"</code>), reverse: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>, expectedText: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>): void</div>
   
   
 
@@ -909,6 +914,11 @@
   
 
   
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>void</code>
+    
+  
 
   
 
@@ -943,7 +953,7 @@
 
   <p>Handle an alertbox/confirmbox/prompt</p>
 
-    <div class='pre p1 fill-light mt0'>handleAlert(action: (<code>"accept"</code> | <code>"dismiss"</code>), type: (<code>"alertbox"</code> | <code>"confirmbox"</code> | <code>"prompt"</code>))</div>
+    <div class='pre p1 fill-light mt0'>handleAlert(action: (<code>"accept"</code> | <code>"dismiss"</code>), type: (<code>"alertbox"</code> | <code>"confirmbox"</code> | <code>"prompt"</code>)): void</div>
   
   
 
@@ -982,6 +992,11 @@
   
 
   
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>void</code>
+    
+  
 
   
 
@@ -1016,7 +1031,7 @@
 
   <p>Enter text into the current prompt</p>
 
-    <div class='pre p1 fill-light mt0'>setPromptText(value: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</div>
+    <div class='pre p1 fill-light mt0'>setPromptText(value: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>): void</div>
   
   
 
@@ -1045,6 +1060,11 @@
 
   
 
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>void</code>
+    
   
 
   
@@ -1080,7 +1100,7 @@
 
   <p>Delete a cookie</p>
 
-    <div class='pre p1 fill-light mt0'>deleteCookie(name: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</div>
+    <div class='pre p1 fill-light mt0'>deleteCookie(name: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>): void</div>
   
   
 
@@ -1109,6 +1129,11 @@
 
   
 
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>void</code>
+    
   
 
   
@@ -1144,7 +1169,7 @@
 
   <p>Check if a cookie with the given name exists</p>
 
-    <div class='pre p1 fill-light mt0'>expectCookieExists(name: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>, reverse: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>)</div>
+    <div class='pre p1 fill-light mt0'>expectCookieExists(name: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>, reverse: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>): void</div>
   
   
 
@@ -1183,6 +1208,11 @@
   
 
   
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>void</code>
+    
+  
 
   
 
@@ -1217,7 +1247,7 @@
 
   <p>Check the content of a cookie against a given value</p>
 
-    <div class='pre p1 fill-light mt0'>expectCookieValue(name: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>, reverse: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>, expectedValue: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</div>
+    <div class='pre p1 fill-light mt0'>expectCookieValue(name: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>, reverse: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>, expectedValue: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>): void</div>
   
   
 
@@ -1265,6 +1295,11 @@
   
 
   
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>void</code>
+    
+  
 
   
 
@@ -1299,7 +1334,7 @@
 
   <p>Set a given cookie to a given value. When the cookies does not exist it will be created</p>
 
-    <div class='pre p1 fill-light mt0'>setCookie(name: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>, value: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</div>
+    <div class='pre p1 fill-light mt0'>setCookie(name: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>, value: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>): void</div>
   
   
 
@@ -1337,6 +1372,11 @@
 
   
 
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>void</code>
+    
   
 
   
@@ -1476,7 +1516,7 @@
 
   <p>Pause execution for a given number of milliseconds</p>
 
-    <div class='pre p1 fill-light mt0'>pause(ms: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</div>
+    <div class='pre p1 fill-light mt0'>pause(ms: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>): void</div>
   
   
 
@@ -1505,6 +1545,11 @@
 
   
 
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>void</code>
+    
   
 
   
@@ -1540,7 +1585,7 @@
 
   <p>Wait for the given element to be checked, enabled, selected, displayed, match/contain a text, match a value or to exist</p>
 
-    <div class='pre p1 fill-light mt0'>waitFor(timeout: (<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/undefined">undefined</a>), element: <a href="#elementquery">ElementQuery</a>, reverse: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>, state: State?, value: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>?)</div>
+    <div class='pre p1 fill-light mt0'>waitFor(timeout: (<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/undefined">undefined</a>), element: <a href="#elementquery">ElementQuery</a>, reverse: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>, state: State?, value: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>?): void</div>
   
   
 
@@ -1608,6 +1653,11 @@
   
 
   
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>void</code>
+    
+  
 
   
 
@@ -1642,7 +1692,7 @@
 
   <p>Wait for the url or path to contain or match the specified value</p>
 
-    <div class='pre p1 fill-light mt0'>waitForURL(timeout: (<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/undefined">undefined</a>), type: (<code>"url"</code> | <code>"path"</code>), reverse: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>, state: State, expectedValue: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</div>
+    <div class='pre p1 fill-light mt0'>waitForURL(timeout: (<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/undefined">undefined</a>), type: (<code>"url"</code> | <code>"path"</code>), reverse: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>, state: State, expectedValue: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>): void</div>
   
   
 
@@ -1709,148 +1759,9 @@
   
 
   
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-</section>
-
-          
-        
-          
-          <section class='p2 mb2 clearfix bg-white minishadow'>
-
-  
-  <div class='clearfix'>
-    
-    <h3 class='fl m0' id='elementquery'>
-      elementQuery
-    </h3>
-    
-    
-  </div>
-  
-
-  <p>Get an element query for the specified text</p>
-
-    <div class='pre p1 fill-light mt0'>elementQuery(name: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>): any</div>
-  
-  
-
-  
-  
-  
-  
-  
-  
-
-  
-    <div class='py1 quiet mt1 prose-big'>Parameters</div>
-    <div class='prose'>
-      
-        <div class='space-bottom0'>
-          <div>
-            <span class='code bold'>name</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
-	    The text to get the selectors by. Separate nesting child selectors by " -> ".
-
-          </div>
-          
-        </div>
-      
-    </div>
-  
-
-  
-
-  
     
       <div class='py1 quiet mt1 prose-big'>Returns</div>
-      <code>any</code>:
-        An ElementQuery for a single element
-
-      
-    
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-</section>
-
-          
-        
-          
-          <section class='p2 mb2 clearfix bg-white minishadow'>
-
-  
-  <div class='clearfix'>
-    
-    <h3 class='fl m0' id='elementsquery'>
-      elementsQuery
-    </h3>
-    
-    
-  </div>
-  
-
-  <p>Get an elements query for the specified text</p>
-
-    <div class='pre p1 fill-light mt0'>elementsQuery(name: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>): any</div>
-  
-  
-
-  
-  
-  
-  
-  
-  
-
-  
-    <div class='py1 quiet mt1 prose-big'>Parameters</div>
-    <div class='prose'>
-      
-        <div class='space-bottom0'>
-          <div>
-            <span class='code bold'>name</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
-	    The text to get the selectors by. Separate nesting child selectors by " -> ".
-
-          </div>
-          
-        </div>
-      
-    </div>
-  
-
-  
-
-  
-    
-      <div class='py1 quiet mt1 prose-big'>Returns</div>
-      <code>any</code>:
-        An ElementsQuery for multiple elements
-
-      
+      <code>void</code>
     
   
 
@@ -1891,7 +1802,134 @@
   
     <p>
       Type:
-      ReturnType&#x3C;any>
+      any
+    </p>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='elementquery'>
+      elementQuery
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Get an element query for the specified text</p>
+
+    <div class='pre p1 fill-light mt0'>elementQuery(name: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>): <a href="#elementquery">ElementQuery</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>name</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+	    The text to get the selectors by. Separate nesting child selectors by " -> ".
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="#elementquery">ElementQuery</a></code>:
+        An ElementQuery for a single element
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='elementsquery'>
+      ElementsQuery
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>When called, returns an array of WebdriverIO.Element.</p>
+
+    <div class='pre p1 fill-light mt0'>ElementsQuery</div>
+  
+    <p>
+      Type:
+      any
     </p>
   
   
@@ -1933,21 +1971,16 @@
   <div class='clearfix'>
     
     <h3 class='fl m0' id='elementsquery'>
-      ElementsQuery
+      elementsQuery
     </h3>
     
     
   </div>
   
 
-  <p>When called, returns an array of WebdriverIO.Element.</p>
+  <p>Get an elements query for the specified text</p>
 
-    <div class='pre p1 fill-light mt0'>ElementsQuery</div>
-  
-    <p>
-      Type:
-      ReturnType&#x3C;any>
-    </p>
+    <div class='pre p1 fill-light mt0'>elementsQuery(name: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>): <a href="#elementsquery">ElementsQuery</a></div>
   
   
 
@@ -1959,9 +1992,31 @@
   
 
   
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>name</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+	    The text to get the selectors by. Separate nesting child selectors by " -> ".
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
 
   
 
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="#elementsquery">ElementsQuery</a></code>:
+        An ElementsQuery for multiple elements
+
+      
+    
   
 
   
@@ -1997,7 +2052,7 @@
 
   <p>Add a value to the current element value</p>
 
-    <div class='pre p1 fill-light mt0'>addValue(value: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>, element: <a href="#elementquery">ElementQuery</a>)</div>
+    <div class='pre p1 fill-light mt0'>addValue(value: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>, element: <a href="#elementquery">ElementQuery</a>): void</div>
   
   
 
@@ -2036,6 +2091,11 @@
   
 
   
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>void</code>
+    
+  
 
   
 
@@ -2070,7 +2130,7 @@
 
   <p>Clear the value of a given input field</p>
 
-    <div class='pre p1 fill-light mt0'>clearValue(element: <a href="#elementquery">ElementQuery</a>)</div>
+    <div class='pre p1 fill-light mt0'>clearValue(element: <a href="#elementquery">ElementQuery</a>): void</div>
   
   
 
@@ -2099,6 +2159,11 @@
 
   
 
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>void</code>
+    
   
 
   
@@ -2134,7 +2199,7 @@
 
   <p>Perform a click action on the given element</p>
 
-    <div class='pre p1 fill-light mt0'>click(action: Action, element: <a href="#elementquery">ElementQuery</a>)</div>
+    <div class='pre p1 fill-light mt0'>click(action: Action, element: <a href="#elementquery">ElementQuery</a>): void</div>
   
   
 
@@ -2173,6 +2238,11 @@
   
 
   
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>void</code>
+    
+  
 
   
 
@@ -2207,7 +2277,7 @@
 
   <p>Drag an element to a given destination</p>
 
-    <div class='pre p1 fill-light mt0'>dragElement(source: <a href="#elementquery">ElementQuery</a>, destination: <a href="#elementquery">ElementQuery</a>)</div>
+    <div class='pre p1 fill-light mt0'>dragElement(source: <a href="#elementquery">ElementQuery</a>, destination: <a href="#elementquery">ElementQuery</a>): void</div>
   
   
 
@@ -2246,6 +2316,11 @@
   
 
   
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>void</code>
+    
+  
 
   
 
@@ -2280,7 +2355,7 @@
 
   <p>Check if the given element has the given class</p>
 
-    <div class='pre p1 fill-light mt0'>expectClass(element: <a href="#elementquery">ElementQuery</a>, reverse: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>, expectedClassName: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</div>
+    <div class='pre p1 fill-light mt0'>expectClass(element: <a href="#elementquery">ElementQuery</a>, reverse: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>, expectedClassName: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>): void</div>
   
   
 
@@ -2328,6 +2403,11 @@
   
 
   
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>void</code>
+    
+  
 
   
 
@@ -2362,7 +2442,7 @@
 
   <p>Check if the given element is (not) displayed</p>
 
-    <div class='pre p1 fill-light mt0'>expectDisplayed(element: <a href="#elementquery">ElementQuery</a>, reverse: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>)</div>
+    <div class='pre p1 fill-light mt0'>expectDisplayed(element: <a href="#elementquery">ElementQuery</a>, reverse: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>): void</div>
   
   
 
@@ -2401,6 +2481,11 @@
   
 
   
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>void</code>
+    
+  
 
   
 
@@ -2435,7 +2520,7 @@
 
   <p>Check if the given element is empty</p>
 
-    <div class='pre p1 fill-light mt0'>expectEmpty(type: (<code>"element"</code> | <code>"button"</code>), element: <a href="#elementquery">ElementQuery</a>, reverse: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>)</div>
+    <div class='pre p1 fill-light mt0'>expectEmpty(type: (<code>"element"</code> | <code>"button"</code>), element: <a href="#elementquery">ElementQuery</a>, reverse: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>): void</div>
   
   
 
@@ -2483,6 +2568,11 @@
   
 
   
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>void</code>
+    
+  
 
   
 
@@ -2517,7 +2607,7 @@
 
   <p>Check if the given element is enabled</p>
 
-    <div class='pre p1 fill-light mt0'>expectEnabled(element: <a href="#elementquery">ElementQuery</a>, reverse: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>)</div>
+    <div class='pre p1 fill-light mt0'>expectEnabled(element: <a href="#elementquery">ElementQuery</a>, reverse: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>): void</div>
   
   
 
@@ -2556,6 +2646,11 @@
   
 
   
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>void</code>
+    
+  
 
   
 
@@ -2590,7 +2685,7 @@
 
   <p>Check if the given element exists in the DOM one or more times</p>
 
-    <div class='pre p1 fill-light mt0'>expectExists(elements: <a href="#elementsquery">ElementsQuery</a>, reverse: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>, exactly: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>?)</div>
+    <div class='pre p1 fill-light mt0'>expectExists(elements: <a href="#elementsquery">ElementsQuery</a>, reverse: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>, exactly: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>?): void</div>
   
   
 
@@ -2638,6 +2733,11 @@
   
 
   
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>void</code>
+    
+  
 
   
 
@@ -2672,7 +2772,7 @@
 
   <p>Check if the given element has the focus</p>
 
-    <div class='pre p1 fill-light mt0'>expectFocus(element: <a href="#elementquery">ElementQuery</a>, reverse: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>)</div>
+    <div class='pre p1 fill-light mt0'>expectFocus(element: <a href="#elementquery">ElementQuery</a>, reverse: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>): void</div>
   
   
 
@@ -2711,6 +2811,11 @@
   
 
   
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>void</code>
+    
+  
 
   
 
@@ -2745,7 +2850,7 @@
 
   <p>Check the offset of the given element</p>
 
-    <div class='pre p1 fill-light mt0'>expectOffset(element: <a href="#elementquery">ElementQuery</a>, reverse: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>, expectedPosition: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>, axis: (<code>"x"</code> | <code>"y"</code>))</div>
+    <div class='pre p1 fill-light mt0'>expectOffset(element: <a href="#elementquery">ElementQuery</a>, reverse: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>, expectedPosition: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>, axis: (<code>"x"</code> | <code>"y"</code>)): void</div>
   
   
 
@@ -2802,6 +2907,11 @@
   
 
   
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>void</code>
+    
+  
 
   
 
@@ -2836,7 +2946,7 @@
 
   <p>Check the given property of the given element</p>
 
-    <div class='pre p1 fill-light mt0'>expectProperty(checkCSS: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>, attrName: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>, element: <a href="#elementquery">ElementQuery</a>, reverse: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>, expectedValue: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</div>
+    <div class='pre p1 fill-light mt0'>expectProperty(checkCSS: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>, attrName: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>, element: <a href="#elementquery">ElementQuery</a>, reverse: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>, expectedValue: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>): void</div>
   
   
 
@@ -2901,6 +3011,11 @@
 
   
 
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>void</code>
+    
   
 
   
@@ -2987,7 +3102,7 @@ object but we want to assert against a string</p>
 
   <p>Compare the contents of two elements with each other</p>
 
-    <div class='pre p1 fill-light mt0'>expectSameTextAs(element1: <a href="#elementquery">ElementQuery</a>, reverse: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>, element2: <a href="#elementquery">ElementQuery</a>)</div>
+    <div class='pre p1 fill-light mt0'>expectSameTextAs(element1: <a href="#elementquery">ElementQuery</a>, reverse: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>, element2: <a href="#elementquery">ElementQuery</a>): void</div>
   
   
 
@@ -3035,6 +3150,11 @@ object but we want to assert against a string</p>
   
 
   
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>void</code>
+    
+  
 
   
 
@@ -3069,7 +3189,7 @@ object but we want to assert against a string</p>
 
   <p>Check the selected state of the given element</p>
 
-    <div class='pre p1 fill-light mt0'>expectSelected(element: <a href="#elementquery">ElementQuery</a>, reverse: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>)</div>
+    <div class='pre p1 fill-light mt0'>expectSelected(element: <a href="#elementquery">ElementQuery</a>, reverse: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>): void</div>
   
   
 
@@ -3108,6 +3228,11 @@ object but we want to assert against a string</p>
   
 
   
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>void</code>
+    
+  
 
   
 
@@ -3142,7 +3267,7 @@ object but we want to assert against a string</p>
 
   <p>Check the dimensions of the given element</p>
 
-    <div class='pre p1 fill-light mt0'>expectSize(dimension: (<code>"width"</code> | <code>"height"</code>), element: <a href="#elementquery">ElementQuery</a>, reverse: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>, expectedSize: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</div>
+    <div class='pre p1 fill-light mt0'>expectSize(dimension: (<code>"width"</code> | <code>"height"</code>), element: <a href="#elementquery">ElementQuery</a>, reverse: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>, expectedSize: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>): void</div>
   
   
 
@@ -3199,6 +3324,11 @@ object but we want to assert against a string</p>
   
 
   
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>void</code>
+    
+  
 
   
 
@@ -3233,7 +3363,7 @@ object but we want to assert against a string</p>
 
   <p>Check if the given elements text is the same as the given text</p>
 
-    <div class='pre p1 fill-light mt0'>expectText(type: (<code>"element"</code> | <code>"button"</code>), element: <a href="#elementquery">ElementQuery</a>, reverse: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>, expectedText: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</div>
+    <div class='pre p1 fill-light mt0'>expectText(type: (<code>"element"</code> | <code>"button"</code>), element: <a href="#elementquery">ElementQuery</a>, reverse: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>, expectedText: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>): void</div>
   
   
 
@@ -3290,6 +3420,11 @@ object but we want to assert against a string</p>
   
 
   
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>void</code>
+    
+  
 
   
 
@@ -3324,7 +3459,7 @@ object but we want to assert against a string</p>
 
   <p>Check if the given elements contains text</p>
 
-    <div class='pre p1 fill-light mt0'>expectTextContains(type: (<code>"element"</code> | <code>"button"</code>), element: <a href="#elementquery">ElementQuery</a>, reverse: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>, expectedText: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</div>
+    <div class='pre p1 fill-light mt0'>expectTextContains(type: (<code>"element"</code> | <code>"button"</code>), element: <a href="#elementquery">ElementQuery</a>, reverse: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>, expectedText: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>): void</div>
   
   
 
@@ -3381,6 +3516,11 @@ object but we want to assert against a string</p>
   
 
   
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>void</code>
+    
+  
 
   
 
@@ -3415,7 +3555,7 @@ object but we want to assert against a string</p>
 
   <p>Check if the given element is displayed inside the current viewport</p>
 
-    <div class='pre p1 fill-light mt0'>expectWithinViewport(element: <a href="#elementquery">ElementQuery</a>, reverse: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>)</div>
+    <div class='pre p1 fill-light mt0'>expectWithinViewport(element: <a href="#elementquery">ElementQuery</a>, reverse: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>): void</div>
   
   
 
@@ -3454,6 +3594,11 @@ object but we want to assert against a string</p>
   
 
   
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>void</code>
+    
+  
 
   
 
@@ -3488,7 +3633,7 @@ object but we want to assert against a string</p>
 
   <p>Move to the given element with an optional offset on an X and Y position</p>
 
-    <div class='pre p1 fill-light mt0'>moveTo(element: <a href="#elementquery">ElementQuery</a>, xOffset: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>, yOffset: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</div>
+    <div class='pre p1 fill-light mt0'>moveTo(element: <a href="#elementquery">ElementQuery</a>, xOffset: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>, yOffset: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>): void</div>
   
   
 
@@ -3536,6 +3681,11 @@ object but we want to assert against a string</p>
   
 
   
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>void</code>
+    
+  
 
   
 
@@ -3570,7 +3720,7 @@ object but we want to assert against a string</p>
 
   <p>Perform a key press</p>
 
-    <div class='pre p1 fill-light mt0'>pressKey(key: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</div>
+    <div class='pre p1 fill-light mt0'>pressKey(key: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>): void</div>
   
   
 
@@ -3599,6 +3749,11 @@ object but we want to assert against a string</p>
 
   
 
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>void</code>
+    
   
 
   
@@ -3634,7 +3789,7 @@ object but we want to assert against a string</p>
 
   <p>Scroll the page to the given element</p>
 
-    <div class='pre p1 fill-light mt0'>scrollTo(element: <a href="#elementquery">ElementQuery</a>)</div>
+    <div class='pre p1 fill-light mt0'>scrollTo(element: <a href="#elementquery">ElementQuery</a>): void</div>
   
   
 
@@ -3663,6 +3818,11 @@ object but we want to assert against a string</p>
 
   
 
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>void</code>
+    
   
 
   
@@ -3698,7 +3858,7 @@ object but we want to assert against a string</p>
 
   <p>Select an option of a select element</p>
 
-    <div class='pre p1 fill-light mt0'>selectOption(type: Type, value: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>, element: <a href="#elementquery">ElementQuery</a>)</div>
+    <div class='pre p1 fill-light mt0'>selectOption(type: Type, value: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>, element: <a href="#elementquery">ElementQuery</a>): void</div>
   
   
 
@@ -3746,6 +3906,11 @@ object but we want to assert against a string</p>
   
 
   
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>void</code>
+    
+  
 
   
 
@@ -3780,7 +3945,7 @@ object but we want to assert against a string</p>
 
   <p>Select an option from a select element by it's index</p>
 
-    <div class='pre p1 fill-light mt0'>selectOptionByIndex(index: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>, element: <a href="#elementquery">ElementQuery</a>)</div>
+    <div class='pre p1 fill-light mt0'>selectOptionByIndex(index: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>, element: <a href="#elementquery">ElementQuery</a>): void</div>
   
   
 
@@ -3819,6 +3984,11 @@ object but we want to assert against a string</p>
   
 
   
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>void</code>
+    
+  
 
   
 
@@ -3853,7 +4023,7 @@ object but we want to assert against a string</p>
 
   <p>Set the value of the given input field to a new value</p>
 
-    <div class='pre p1 fill-light mt0'>setValue(element: <a href="#elementquery">ElementQuery</a>, value: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</div>
+    <div class='pre p1 fill-light mt0'>setValue(element: <a href="#elementquery">ElementQuery</a>, value: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>): void</div>
   
   
 
@@ -3891,6 +4061,11 @@ object but we want to assert against a string</p>
 
   
 
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>void</code>
+    
   
 
   
@@ -3965,6 +4140,11 @@ object but we want to assert against a string</p>
   
 
   
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>void</code>
+    
+  
 
   
 
@@ -4028,6 +4208,11 @@ object but we want to assert against a string</p>
 
   
 
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>
+    
   
 
   
@@ -4093,6 +4278,11 @@ object but we want to assert against a string</p>
   
 
   
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>
+    
+  
 
   
 
@@ -4157,6 +4347,11 @@ object but we want to assert against a string</p>
   
 
   
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>T</code>
+    
+  
 
   
 
@@ -4220,6 +4415,11 @@ object but we want to assert against a string</p>
 
   
 
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>
+    
   
 
   
@@ -4376,7 +4576,7 @@ object but we want to assert against a string</p>
   
     
       <div class='py1 quiet mt1 prose-big'>Returns</div>
-      <code>any</code>:
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>:
         The element value if type is not 'button', but the tagname is input, select or textarea. Otherwise the element text.
 
       
@@ -5248,7 +5448,7 @@ object but we want to assert against a string</p>
 
   <p>Close all tabs but the first one.</p>
 
-    <div class='pre p1 fill-light mt0'>closeAllButFirstTab()</div>
+    <div class='pre p1 fill-light mt0'>closeAllButFirstTab(): void</div>
   
   
 
@@ -5263,6 +5463,11 @@ object but we want to assert against a string</p>
 
   
 
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>void</code>
+    
   
 
   
@@ -5298,7 +5503,7 @@ object but we want to assert against a string</p>
 
   <p>Close the last opened window</p>
 
-    <div class='pre p1 fill-light mt0'>closeLastOpenedWindow()</div>
+    <div class='pre p1 fill-light mt0'>closeLastOpenedWindow(): void</div>
   
   
 
@@ -5313,6 +5518,11 @@ object but we want to assert against a string</p>
 
   
 
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>void</code>
+    
   
 
   
@@ -5348,7 +5558,7 @@ object but we want to assert against a string</p>
 
   <p>Check if a new window or tab is opened</p>
 
-    <div class='pre p1 fill-light mt0'>expectNewWindow(reverse: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>?)</div>
+    <div class='pre p1 fill-light mt0'>expectNewWindow(reverse: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>?): void</div>
   
   
 
@@ -5377,6 +5587,11 @@ object but we want to assert against a string</p>
 
   
 
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>void</code>
+    
   
 
   
@@ -5412,7 +5627,7 @@ object but we want to assert against a string</p>
 
   <p>Check if the given URL or path was opened in a new window</p>
 
-    <div class='pre p1 fill-light mt0'>expectNewWindowURL(type: (<code>"url"</code> | <code>"path"</code>), expectedValue: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</div>
+    <div class='pre p1 fill-light mt0'>expectNewWindowURL(type: (<code>"url"</code> | <code>"path"</code>), expectedValue: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>): void</div>
   
   
 
@@ -5450,6 +5665,11 @@ object but we want to assert against a string</p>
 
   
 
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>void</code>
+    
   
 
   
@@ -5485,7 +5705,7 @@ object but we want to assert against a string</p>
 
   <p>Check the title of the current browser window</p>
 
-    <div class='pre p1 fill-light mt0'>expectTitle(reverse: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>, expectedTitle: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</div>
+    <div class='pre p1 fill-light mt0'>expectTitle(reverse: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>, expectedTitle: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>): void</div>
   
   
 
@@ -5523,6 +5743,11 @@ object but we want to assert against a string</p>
 
   
 
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>void</code>
+    
   
 
   
@@ -5558,7 +5783,7 @@ object but we want to assert against a string</p>
 
   <p>Check the title of the current browser window contains expected text/title</p>
 
-    <div class='pre p1 fill-light mt0'>expectTitleContains(reverse: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>, expectedTitle: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</div>
+    <div class='pre p1 fill-light mt0'>expectTitleContains(reverse: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>, expectedTitle: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>): void</div>
   
   
 
@@ -5597,6 +5822,11 @@ object but we want to assert against a string</p>
   
 
   
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>void</code>
+    
+  
 
   
 
@@ -5631,7 +5861,7 @@ object but we want to assert against a string</p>
 
   <p>Check if the current URL or path matches the given value</p>
 
-    <div class='pre p1 fill-light mt0'>expectURL(type: (<code>"url"</code> | <code>"path"</code>), reverse: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>, expectedValue: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</div>
+    <div class='pre p1 fill-light mt0'>expectURL(type: (<code>"url"</code> | <code>"path"</code>), reverse: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>, expectedValue: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>): void</div>
   
   
 
@@ -5679,6 +5909,11 @@ object but we want to assert against a string</p>
   
 
   
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>void</code>
+    
+  
 
   
 
@@ -5713,7 +5948,7 @@ object but we want to assert against a string</p>
 
   <p>Check if the given string is in the URL path</p>
 
-    <div class='pre p1 fill-light mt0'>expectURLContains(type: (<code>"url"</code> | <code>"path"</code>), reverse: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>, expectedPart: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</div>
+    <div class='pre p1 fill-light mt0'>expectURLContains(type: (<code>"url"</code> | <code>"path"</code>), reverse: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>, expectedPart: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>): void</div>
   
   
 
@@ -5761,6 +5996,11 @@ object but we want to assert against a string</p>
   
 
   
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>void</code>
+    
+  
 
   
 
@@ -5795,7 +6035,7 @@ object but we want to assert against a string</p>
 
   <p>Focus the last opened window</p>
 
-    <div class='pre p1 fill-light mt0'>focusLastOpenedWindow()</div>
+    <div class='pre p1 fill-light mt0'>focusLastOpenedWindow(): void</div>
   
   
 
@@ -5810,6 +6050,11 @@ object but we want to assert against a string</p>
 
   
 
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>void</code>
+    
   
 
   
@@ -5845,7 +6090,7 @@ object but we want to assert against a string</p>
 
   <p>Open the given URL</p>
 
-    <div class='pre p1 fill-light mt0'>openURL(type: (<code>"url"</code> | <code>"path"</code>), url: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</div>
+    <div class='pre p1 fill-light mt0'>openURL(type: (<code>"url"</code> | <code>"path"</code>), url: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>): void</div>
   
   
 
@@ -5884,6 +6129,11 @@ object but we want to assert against a string</p>
   
 
   
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>void</code>
+    
+  
 
   
 
@@ -5918,7 +6168,7 @@ object but we want to assert against a string</p>
 
   <p>Resize the browser window</p>
 
-    <div class='pre p1 fill-light mt0'>resizeWindow(width: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>, height: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</div>
+    <div class='pre p1 fill-light mt0'>resizeWindow(width: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>, height: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>): void</div>
   
   
 
@@ -5956,6 +6206,11 @@ object but we want to assert against a string</p>
 
   
 
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>void</code>
+    
   
 
   

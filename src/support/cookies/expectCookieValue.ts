@@ -6,7 +6,7 @@ import { failMessage } from '../failMessage';
  * @param reverse       Check for opposite state
  * @param expectedValue The value to check against
  */
-export default (name: string, reverse: boolean, expectedValue: string) => {
+export default (name: string, reverse: boolean, expectedValue: string): void => {
     const cookies = browser.getCookies([name]);
 
     failMessage(() => expect(cookies).toHaveLength(1), `Expected exactly one cookie with name "${name}"`);

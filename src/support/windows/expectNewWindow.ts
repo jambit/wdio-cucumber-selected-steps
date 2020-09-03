@@ -4,7 +4,7 @@ import { failMessage } from '../failMessage';
  * Check if a new window or tab is opened
  * @param reverse Check for opposite state
  */
-export default (reverse?: boolean) => {
+export default (reverse?: boolean): void => {
     const windowHandles = browser.getWindowHandles();
 
     if (reverse) {

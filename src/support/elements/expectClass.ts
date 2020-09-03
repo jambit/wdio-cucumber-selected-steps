@@ -7,7 +7,7 @@ import { failMessage } from '../failMessage';
  * @param reverse           Check for opposite state
  * @param expectedClassName The class name to check
  */
-export default (element: ElementQuery, reverse: boolean, expectedClassName: string) => {
+export default (element: ElementQuery, reverse: boolean, expectedClassName: string): void => {
     const classesList = element().getAttribute('className').split(' ');
 
     if (reverse) {

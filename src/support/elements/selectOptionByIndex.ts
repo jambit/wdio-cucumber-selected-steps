@@ -5,4 +5,4 @@ import { ElementQuery } from '../elementQuery';
  * @param index     The index of the option
  * @param element   The element query
  */
-export default (index: number, element: ElementQuery) => element().selectByIndex(index);
+export default (index: number, element: ElementQuery): void => element().selectByIndex(index);

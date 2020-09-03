@@ -6,7 +6,7 @@ import { failMessage } from '../failMessage';
  * @param type      The type of modal that is expected
  * @param reverse   Check for opposite state
  */
-export default (type: 'an alertbox' | 'a confirmbox' | 'a prompt', reverse: boolean) => {
+export default (type: 'an alertbox' | 'a confirmbox' | 'a prompt', reverse: boolean): void => {
     const open = browser.isAlertOpen();
     if (open && !reverse) {
         failMessage(() => expect(reverse).toBe(false), `${ucFirst(type)} was opened when it shouldn't have been`);

@@ -6,18 +6,19 @@ import fs from 'fs';
 import yaml from 'js-yaml';
 
 interface SelectorMap {
-    [s: string]: string | Function;
+    [s: string]: SelectorData;
 }
 
 const mappers: { [s: string]: (file: string) => SelectorMap } = {
+    // eslint-disable-next-line @typescript-eslint/no-var-requires
     js: (file) => require(file).default,
     json: (file) => JSON.parse(fs.readFileSync(file, 'utf8')),
-    yaml: (file) => yaml.safeLoad(fs.readFileSync(file, 'utf8')),
+    yaml: (file) => yaml.safeLoad(fs.readFileSync(file, 'utf8')) as unknown as SelectorMap,
 };
 // alias
 mappers.yml = mappers.yaml;
 
-export const setupSelectors = (patterns: string[]) => {
+export const setupSelectors = (patterns: string[]): typeof global.getSelector => {
     const cwd = process.cwd();
     const importedSelectors = patterns
         .map((pattern) => glob.sync(pattern))
@@ -44,6 +45,6 @@ export const setupSelectors = (patterns: string[]) => {
 
 global.selectedStepsTextMethod = 'getText';
 
-export const setupTextMethod = (method: 'getText' | 'textContent') => {
+export const setupTextMethod = (method: 'getText' | 'textContent'): void => {
     global.selectedStepsTextMethod = method;
 };

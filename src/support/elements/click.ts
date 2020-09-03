@@ -14,7 +14,7 @@ type Action = keyof typeof ACTION_HANDLERS;
  * @param action      The action to perform
  * @param element     The element query
  */
-export default (action: Action, element: ElementQuery) => {
+export default (action: Action, element: ElementQuery): void => {
     failMessage(() => expect(ACTIONS).toContain(action), `Invalid action: '${action}. Valid actions are: ${ACTIONS.join(', ')}'`);
     const handler = ACTION_HANDLERS[action];
     handler(element);

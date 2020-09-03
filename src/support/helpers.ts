@@ -5,25 +5,25 @@ const HOST_PART = /http(s?):\/\/[^/]*/;
  * Turn the first character of the supplied string to upper-case.
  * @param text  The text to change
  */
-export const ucFirst = (text: string) => text[0].toUpperCase() + text.substring(1);
+export const ucFirst = (text: string): string => text[0].toUpperCase() + text.substring(1);
 
 /**
  * Remove the first word of the supplied string (including whitespace).
  * @param text  The text to change
  */
-export const dropFirstWord = (text: string) => text.replace(FIRST_WORD_REGEX, '');
+export const dropFirstWord = (text: string): string => text.replace(FIRST_WORD_REGEX, '');
 
 /**
  * Get the last element of a list
  * @param list  The list to use
  */
-export const lastOf = <T>(list: T[]) => list[list.length - 1];
+export const lastOf = <T>(list: T[]): T => list[list.length - 1];
 
 /**
  * Get the current url or path (if type !== 'url')
  * @param type  The type
  */
-export const getUrlOrPath = (type: 'url' | 'path') => {
+export const getUrlOrPath = (type: 'url' | 'path'): string => {
     const url = browser.getUrl();
     return type === 'url' ? url : url.replace(HOST_PART, '');
 };
@@ -45,7 +45,7 @@ export const getText =
  * @param  element   The element
  * @returns The element value if type is not 'button', but the tagname is input, select or textarea. Otherwise the element text.
  */
-export const getTextOrValue = (type: 'element' | 'button', element: WebdriverIO.Element) => {
+export const getTextOrValue = (type: 'element' | 'button', element: WebdriverIO.Element): string => {
     if (type !== 'button') {
         const tagName = element.getTagName().toLowerCase();
         switch (tagName) {

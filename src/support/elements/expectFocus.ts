@@ -6,7 +6,7 @@ import { failMessage } from '../failMessage';
  * @param element   The element query
  * @param reverse   Check for opposite state
  */
-export default (element: ElementQuery, reverse: boolean) => {
+export default (element: ElementQuery, reverse: boolean): void => {
     if (reverse) {
         failMessage(() => expect(element()).not.toBeFocused(), `Expected the element "${element}" to not be focused, but it is`);
     } else {

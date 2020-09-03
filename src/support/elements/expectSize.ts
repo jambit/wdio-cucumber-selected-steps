@@ -8,7 +8,7 @@ import { failMessage } from '../failMessage';
  * @param reverse       Check for opposite state
  * @param expectedSize  Expected size
  */
-export default (dimension: 'width' | 'height', element: ElementQuery, reverse: boolean, expectedSize: number) => {
+export default (dimension: 'width' | 'height', element: ElementQuery, reverse: boolean, expectedSize: number): void => {
     const elementSize = element().getSize()[dimension];
 
     if (reverse) {

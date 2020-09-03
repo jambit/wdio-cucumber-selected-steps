@@ -26,5 +26,5 @@ declare module 'documentation' {
         params: Param[];
     }
 
-    function build(indexes: string[], args: {}): Promise<Comment[]>;
+    function build(indexes: string[], args: { [s: string]: unknown }): Promise<Comment[]>;
 }

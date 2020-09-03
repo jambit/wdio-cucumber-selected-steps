@@ -6,7 +6,7 @@ import { failMessage } from '../failMessage';
  * @param element   The element query
  * @param reverse   Check for opposite state
  */
-export default (element: ElementQuery, reverse: boolean) => {
+export default (element: ElementQuery, reverse: boolean): void => {
     if (reverse) {
         failMessage(() => expect(element()).not.toBeEnabled(), `Expected the element "${element}" not to be enabled`);
     } else {

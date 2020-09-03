@@ -8,7 +8,7 @@ import { failMessage } from '../failMessage';
  * @param expectedPosition  The position to check against
  * @param axis              The axis to check on
  */
-export default (element: ElementQuery, reverse: boolean, expectedPosition: number, axis: 'x' | 'y') => {
+export default (element: ElementQuery, reverse: boolean, expectedPosition: number, axis: 'x' | 'y'): void => {
     const location = element().getLocation(axis);
 
     if (reverse) {

@@ -5,7 +5,7 @@ import { failMessage } from '../failMessage';
  * @param reverse       Check for opposite state
  * @param expectedTitle The expected title
  */
-export default (reverse: boolean, expectedTitle: string) => {
+export default (reverse: boolean, expectedTitle: string): void => {
     const title = browser.getTitle();
     const contains = title.includes(expectedTitle);
 

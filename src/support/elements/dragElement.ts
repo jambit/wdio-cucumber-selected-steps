@@ -5,4 +5,4 @@ import { ElementQuery } from '../elementQuery';
  * @param source        The element query for the source element
  * @param destination   The element query for the destination element
  */
-export default (source: ElementQuery, destination: ElementQuery) => source().dragAndDrop(destination());
+export default (source: ElementQuery, destination: ElementQuery): void => source().dragAndDrop(destination());

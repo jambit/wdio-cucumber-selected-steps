@@ -7,7 +7,7 @@ import { failMessage } from '../failMessage';
  * @param reverse       Check for opposite state
  * @param expectedValue The expected value to match against
  */
-export default (type: 'url' | 'path', reverse: boolean, expectedValue: string) => {
+export default (type: 'url' | 'path', reverse: boolean, expectedValue: string): void => {
     const value = getUrlOrPath(type);
 
     if (reverse) {

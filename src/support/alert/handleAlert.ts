@@ -12,7 +12,7 @@ const TYPES = ['alertbox', 'confirmbox', 'prompt'];
  * @param action    Action to perform
  * @param type      Type of modal
  */
-export default (action: 'accept' | 'dismiss', type: 'alertbox' | 'confirmbox' | 'prompt') => {
+export default (action: 'accept' | 'dismiss', type: 'alertbox' | 'confirmbox' | 'prompt'): void => {
     failMessage(() => expect(ACTIONS).toContain(action), `Invalid action: '${action}. Valid actions are: ${ACTIONS.join(', ')}'`);
     failMessage(() => expect(TYPES).toContain(type), `Invalid type: '${type}. Valid types are: ${TYPES.join(', ')}'`);
 

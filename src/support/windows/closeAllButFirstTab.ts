@@ -1,7 +1,7 @@
 /**
  * Close all tabs but the first one.
  */
-export default () => {
+export default (): void => {
     const windowHandles = browser.getWindowHandles();
 
     windowHandles.slice(1).forEach((handle) => {

@@ -7,7 +7,7 @@ import { failMessage } from '../failMessage';
  * @param reverse   Check for opposite state
  * @param exactly   Check if the element exists exactly this number of times
  */
-export default (elements: ElementsQuery, reverse: boolean, exactly?: number) => {
+export default (elements: ElementsQuery, reverse: boolean, exactly?: number): void => {
     const count = elements().length;
 
     if (reverse) {

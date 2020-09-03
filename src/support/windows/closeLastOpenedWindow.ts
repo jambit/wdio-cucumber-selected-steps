@@ -3,7 +3,7 @@ import { lastOf } from '../helpers';
 /**
  * Close the last opened window
  */
-export default () => {
+export default (): void => {
     const handles = browser.getWindowHandles();
     browser.switchToWindow(lastOf(handles));
 

@@ -7,7 +7,7 @@ import { failMessage } from '../failMessage';
  * @param reverse       Check for opposite state
  * @param expectedText  The text to check against
  */
-export default (type: 'an alertbox' | 'a confirmbox' | 'a prompt', reverse: boolean, expectedText: string) => {
+export default (type: 'an alertbox' | 'a confirmbox' | 'a prompt', reverse: boolean, expectedText: string): void => {
     try {
         const text = browser.getAlertText();
 

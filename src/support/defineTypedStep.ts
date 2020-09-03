@@ -2,7 +2,7 @@ import { defineStep, StepDefinitionCode, StepDefinitionOptions } from 'cucumber'
 
 import { ParamType } from './paramType';
 
-function wrapStep(paramTypes: ParamType[], fn: Function): StepDefinitionCode {
+function wrapStep(paramTypes: ParamType[], fn: StepDefinitionCode): StepDefinitionCode {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     function wrapped(this: any, ...args: any[]) {
         return fn.apply(this, paramTypes.map((paramType, index) => paramType(args[index])));
@@ -27,7 +27,7 @@ export function defineTypedStep(
     types: ParamType[],
     options: StepDefinitionOptions | StepDefinitionCode,
     code?: StepDefinitionCode,
-) {
+): void {
     if (typeof options === 'function') {
         defineStep(pattern, wrapStep(types, options));
     } else {

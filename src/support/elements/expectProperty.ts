@@ -1,5 +1,6 @@
 import { ElementQuery } from '../elementQuery';
 import { failMessage } from '../failMessage';
+import { CSSProperty } from '@wdio/sync';
 
 /**
  * Check the given property of the given element
@@ -9,7 +10,7 @@ import { failMessage } from '../failMessage';
  * @param reverse       Check for opposite state
  * @param expectedValue The value to match against
  */
-export default (checkCSS: boolean, attrName: string, element: ElementQuery, reverse: boolean, expectedValue: string) => {
+export default (checkCSS: boolean, attrName: string, element: ElementQuery, reverse: boolean, expectedValue: string): void => {
     const command = checkCSS ? 'getCSSProperty' : 'getAttribute';
     const attrType = checkCSS ? 'CSS attribute' : 'Attribute';
 
@@ -20,8 +21,7 @@ export default (checkCSS: boolean, attrName: string, element: ElementQuery, reve
      * object but we want to assert against a string
      */
     if (attrName.match(/(font-size|line-height|display|color|font-weight)/)) {
-        // @ts-ignore
-        attributeValue = attributeValue.value;
+        attributeValue = (attributeValue as CSSProperty).value;
     }
     attributeValue = attributeValue.toString();
 

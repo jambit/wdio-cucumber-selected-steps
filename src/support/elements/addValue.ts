@@ -5,4 +5,4 @@ import { ElementQuery } from '../elementQuery';
  * @param value     The value to add to the element
  * @param element   The element query
  */
-export default (value: string, element: ElementQuery) => element().addValue(value);
+export default (value: string, element: ElementQuery): void => element().addValue(value);

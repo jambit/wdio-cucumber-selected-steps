@@ -8,7 +8,7 @@ import { failMessage } from '../failMessage';
  * @param element   The element query
  * @param reverse   Check for opposite state
  */
-export default (type: 'element' | 'button', element: ElementQuery, reverse: boolean) => {
+export default (type: 'element' | 'button', element: ElementQuery, reverse: boolean): void => {
     const text = getTextOrValue(type, element());
 
     if (reverse) {

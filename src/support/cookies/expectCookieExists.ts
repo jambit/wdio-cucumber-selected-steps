@@ -5,7 +5,7 @@ import { failMessage } from '../failMessage';
  * @param name      The name of the cookie
  * @param reverse   Check for opposite state
  */
-export default (name: string, reverse: boolean) => {
+export default (name: string, reverse: boolean): void => {
     const cookies = browser.getCookies([name]);
 
     if (reverse) {

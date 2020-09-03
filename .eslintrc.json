@@ -17,7 +17,7 @@
     "rules": {
         "max-len": ["error", { "code": 150, "ignoreRegExpLiterals": true }],
         "prefer-destructuring": ["off"],
-        "no-use-before-define": ["error", { "functions": false, "classes": true }],
+        "no-use-before-define": ["off", { "functions": false, "classes": true }],
         "class-methods-use-this": ["off"],
         "no-console": ["error"],
         "operator-linebreak": ["error", "after", { "overrides": { "?": "before", ":": "before", "+": "before", "&&": "before" } }],
@@ -34,7 +34,7 @@
         "@typescript-eslint/indent": ["error", 4, {"SwitchCase": 1}],
         "@typescript-eslint/prefer-destructuring": ["off"],
         "@typescript-eslint/explicit-function-return-type": ["off"],
-        "@typescript-eslint/no-use-before-define": ["off", { "functions": false, "classes": true }],
+        "@typescript-eslint/no-use-before-define": ["error", { "functions": false, "classes": true }],
         "@typescript-eslint/explicit-member-accessibility": ["off"],
         "@typescript-eslint/camelcase": ["off"],
         "@typescript-eslint/no-non-null-assertion": ["off"],

@@ -8,7 +8,7 @@ import { failMessage } from '../failMessage';
  * @param type          The type to check
  * @param expectedValue The expected value to match against
  */
-export default (type: 'url' | 'path', expectedValue: string) => {
+export default (type: 'url' | 'path', expectedValue: string): void => {
     expectNewWindow();
     focusLastOpenedWindow();
 

@@ -10,3 +10,4 @@ export * from './paramType';
 export * from './defineTypedStep';
 export * from './elementQuery';
 export * from './failMessage';
+export * from './getSelector';

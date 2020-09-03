@@ -61,7 +61,7 @@ exports.config = {
         //...
     },
     // ...
-    before: function before() {
+    before: function (capabilities, specs) {
         // Setup the path to your selectors:
         setupSelectors([
             './src/selectors/*.js'
@@ -69,6 +69,43 @@ exports.config = {
         // ...
     },
 ```
+
+#### wdio.conf.js Adjustments for Selector Replacements
+In some cases, you want to set up some variables in the config to be used in the test.
+This can be useful when you need to create data on a remote server during tests and later access them.
+If you need those variables to be in the selector files, you can now easily do this!
+
+```JavaScript
+const { setupSelectors, setupTextMethod } = require('@jambit/wdio-cucumber-selected-steps');
+
+exports.config = {
+    // ...
+    before: function (capabilities, specs) {
+        // Setup the path to your selectors:
+        setupSelectors(...);
+        setSelectorVariable("TEST_ID", Date.now().toString());
+        // ...
+    },
+```
+
+In your selector files, you can now use `{{TEST_ID}}` inside of your selector files:
+
+```yml
+---
+My Selector: ".data-1-{{TEST_ID}}"
+My Selector Nested:
+  foo: ".data-2-{{TEST_ID}}"
+  bar: ".data-3-{{TEST_ID}}"
+```
+
+Any value, which is a text (even in a nested object or array) will be replaced with the defined replacement.
+You can even specify a function to generate a value:
+
+```JavaScript
+        setSelectorVariable("RANDOM", () => Math.random());
+```
+
+This function will be called freshly for every text value to be replaced.
 
 #### wdio.conf.js Adjustments for Text Method
 Additionally, you can configure the text method used. By default, wdio uses `element.getText()`, which will return the transformed text. I.e. if you set your css to upper-case some text, you will get the upper-case version of the text. If you want to get the non-transformed version, you would have to test the attribute `textContent`. To make this more convenient, you can configure the default behavior.
@@ -78,7 +115,7 @@ const { setupSelectors, setupTextMethod } = require('@jambit/wdio-cucumber-selec
 
 exports.config = {
     // ...
-    before: function before() {
+    before: function (capabilities, specs) {
         // Setup the path to your selectors:
         setupSelectors(...);
         setupTextMethod('textContent');

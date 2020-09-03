@@ -50,7 +50,7 @@ export const paramType = {
         setFalse: (falseValue: string) => addOptional((value) => value !== falseValue),
     }) as ParamTypeBool,
     /** The parameter is expected to be a selector key. `getSelector()` is applied. */
-    selector: addOptional((value) => getSelector(value)),
+    selector: addOptional((value) => global.getSelector(value)),
     /** The parameter is expected to be a selector key. `elementQuery()` is applied. */
     element: addOptional((value) => elementQuery(value)),
     /** The parameter is expected to be a selector key. `elementsQuery()` is applied. */

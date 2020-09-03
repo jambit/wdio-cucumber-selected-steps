@@ -23,8 +23,8 @@ export type ElementQuery = (() => WebdriverIO.Element) & {
  */
 export function elementQuery(name: string): ElementQuery {
     const query = () => {
-        const names = name.split(separator);
-        const selectors = names.map((name2) => getSelector(name2));
+        const nameParts = name.split(separator);
+        const selectors = nameParts.map((namePart) => global.getSelector(namePart));
         let selector = selectors.shift() as ElementSelectorData;
         expect(selector).toBeTruthy();
         let element: WebdriverIO.Element | null = null;
@@ -38,7 +38,7 @@ export function elementQuery(name: string): ElementQuery {
     return Object.assign(query, { toString: () => name });
 }
 
-function selectNodes(sourceElements: WebdriverIO.Element[], remainingSelectors: Array<SelectorData>): WebdriverIO.Element[] {
+function selectNodes(sourceElements: WebdriverIO.Element[], remainingSelectors: Array<NodeJS.SelectorData>): WebdriverIO.Element[] {
     if (remainingSelectors.length === 0 || sourceElements.length === 0) {
         return sourceElements;
     }
@@ -64,9 +64,9 @@ export type ElementsQuery = (() => WebdriverIO.Element[]) & {
  */
 export function elementsQuery(name: string): ElementsQuery {
     const query = () => {
-        const names = name.split(separator);
-        expect(names.length).toBeGreaterThan(0);
-        const selectors = names.map((name2) => getSelector(name2));
+        const nameParts = name.split(separator);
+        expect(nameParts.length).toBeGreaterThan(0);
+        const selectors = nameParts.map((namePart) => global.getSelector(namePart));
         const selector = selectors.shift() as ElementSelectorData;
         return selectNodes($$(selector), selectors);
     };

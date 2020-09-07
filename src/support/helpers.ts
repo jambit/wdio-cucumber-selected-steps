@@ -36,8 +36,8 @@ export const getUrlOrPath = (type: 'url' | 'path'): string => {
  */
 export const getText =
     global.selectedStepsTextMethod === 'textContent'
-        ? (element: WebdriverIO.Element) => element.getProperty('textContent') as string
-        : (element: WebdriverIO.Element) => element.getText();
+        ? (element: WebdriverIO.Element) => (element.getProperty('textContent') as string).trim()
+        : (element: WebdriverIO.Element) => element.getText().trim();
 
 /**
  * Get the text or value of an element or button

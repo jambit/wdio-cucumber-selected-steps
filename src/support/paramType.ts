@@ -27,6 +27,14 @@ export interface ParamTypeBool extends ParamTypeWithOptional {
 }
 
 /**
+ * Conversion function for input values from .feature files, with possibility to use optional.
+ */
+export interface ParamTypeFormat extends ParamTypeWithOptional {
+    /** The parameter is expected to be a string. `pattern` must contain '{{VALUE}}', which will be replaced by the parameter. */
+    format(pattern: string): ParamTypeWithOptional;
+}
+
+/**
  * Helper to add an 'optional' method to the function to make a parameter optional.
  * @param fn The function to add the 'optional' attribute to.
  */
@@ -50,9 +58,15 @@ export const paramType = {
         setFalse: (falseValue: string) => addOptional((value) => value !== falseValue),
     }) as ParamTypeBool,
     /** The parameter is expected to be a selector key. `getSelector()` is applied. */
-    selector: addOptional((value) => global.getSelector(value)),
+    selector: Object.assign(addOptional((value) => global.getSelector(value)), {
+        format: (pattern: string) => addOptional((value) => global.getSelector(pattern.split('{{VALUE}}').join(value))),
+    }) as ParamTypeFormat,
     /** The parameter is expected to be a selector key. `elementQuery()` is applied. */
-    element: addOptional((value) => elementQuery(value)),
+    element: Object.assign(addOptional((value) => elementQuery(value)), {
+        format: (pattern: string) => addOptional((value) => elementQuery(pattern.split('{{VALUE}}').join(value))),
+    }) as ParamTypeFormat,
     /** The parameter is expected to be a selector key. `elementsQuery()` is applied. */
-    elements: addOptional((value) => elementsQuery(value)),
+    elements: Object.assign(addOptional((value) => elementsQuery(value)), {
+        format: (pattern: string) => addOptional((value) => elementsQuery(pattern.split('{{VALUE}}').join(value))),
+    }) as ParamTypeFormat,
 };

@@ -347,6 +347,13 @@ paramType.bool.setTrue('does not contain'),
 paramType.bool.setFalse('contains'),
 ```
 
+If you want to avoid always adding the same prefix/suffix for a `paramType.selector/element(s)`, you can use the `.format()` option:
+```JavaScript
+paramType.selector.format("Prefix{{VALUE}}Suffix"),
+```
+
+In this case, if your value received from the .feature file was "FooBar", then it would become "PrefixFooBarSuffix" before being evaluated.
+
 You can even write your own paramTypes. Just have a look at the built-in ones: [src/support/paramType.ts](src/support/paramType.ts).
 
 For samples of how steps can look, just take a look at the [src/steps](src/steps) folder of this library. The logic implementation resides in the [src/support](src/support) folder.

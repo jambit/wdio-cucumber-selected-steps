@@ -19,7 +19,7 @@ const mappers: { [s: string]: (file: string) => SelectorMap } = {
     // eslint-disable-next-line @typescript-eslint/no-var-requires
     js: (file) => require(file).default,
     json: (file) => JSON.parse(fs.readFileSync(file, 'utf8')),
-    yaml: (file) => yaml.safeLoad(fs.readFileSync(file, 'utf8')) as unknown as SelectorMap,
+    yaml: (file) => yaml.load(fs.readFileSync(file, 'utf8')) as unknown as SelectorMap,
 };
 // alias
 mappers.yml = mappers.yaml;

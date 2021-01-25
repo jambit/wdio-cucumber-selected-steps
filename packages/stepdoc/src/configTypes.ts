@@ -13,7 +13,9 @@ export interface StepDocConfig {
 export interface StepDocExecutionConfig {
     /** The file to modify/replace. */
     file: string;
-    /** The relative or absolute path to the template file */
+    /** The relative or absolute path to the template folder (defaults to stepdoc/templates) */
+    templatePath?: string;
+    /** The relative path to the template file (must live inside templatePath) */
     template: string;
     /** If you specify a replace start, the documentation will be inserted into an existing file between start and end */
     replaceStart?: string;

@@ -5,13 +5,11 @@
         "tsconfigRootDir": "."
     },
     "plugins": [
-        "@typescript-eslint",
-        "jest"
+        "@typescript-eslint"
     ],
     "extends": [
         "airbnb-base",
         "plugin:@typescript-eslint/recommended",
-        "plugin:jest/recommended",
         "plugin:import/typescript"
     ],
     "rules": {
@@ -27,7 +25,6 @@
             "ts": "never"
         }],
         "indent": ["error", 4, {"SwitchCase": 1}],
-        "jest/no-standalone-expect": "off",
         "@typescript-eslint/ban-ts-ignore": "off",
         "@typescript-eslint/no-angle-bracket-type-assertion": "off",
         "@typescript-eslint/consistent-type-assertions": ["warn", { "assertionStyle": "as", "objectLiteralTypeAssertions": "allow" }],
@@ -45,8 +42,5 @@
         "getSelector": "readonly",
         "$$": "readonly",
         "$": "readonly"
-    },
-    "env": {
-        "jest/globals": true
     }
 }

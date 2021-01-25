@@ -1,76 +1,28 @@
 {
-  "name": "@jambit/wdio-cucumber-selected-steps",
-  "version": "1.2.0",
-  "description": "Cucumber step definition basics for easy import",
-  "keywords": [
-    "webdriverio",
-    "cucumber",
-    "test",
-    "selenium",
-    "selectors",
-    "steps"
-  ],
-  "homepage": "https://github.com/jambit/wdio-cucumber-selected-steps",
-  "bugs": {
-    "url": "https://github.com/jambit/wdio-cucumber-selected-steps/issues"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/jambit/wdio-cucumber-selected-steps.git"
-  },
-  "license": "MIT",
-  "author": "Santo Pfingsten (Jambit GmbH)",
-  "main": "lib/index.js",
-  "files": [
-    "lib",
-    "docs",
-    "STEPS.md"
+  "private": true,
+  "workspaces": [
+    "packages/stepdoc",
+    "packages/library"
   ],
   "scripts": {
-    "build": "rimraf lib && tsc",
-    "docs": "npm run docs:html && npm run docs:steps",
-    "docs:html": "documentation build src/support/** --parse-extension ts -f html -o docs",
-    "docs:steps": "stepdoc",
-    "eslint": "eslint src --ext ts",
-    "eslint:fix": "eslint src --fix --ext ts",
-    "test": "jest --watch"
-  },
-  "dependencies": {
-    "@babel/core": "^7.11.5",
-    "@babel/preset-env": "^7.11.5",
-    "glob": "^7.1.6",
-    "jest": "^26.4.2",
-    "js-yaml": "^3.14.0"
+    "build": "yarn workspaces run build",
+    "docs": "yarn workspace @jambit/wdio-cucumber-selected-steps docs",
+    "lint": "yarn run lint:es && yarn run lint:package",
+    "lint:es": "eslint 'packages/*/src/**/*.ts' --ext ts",
+    "lint:es:fix": "eslint 'packages/*/src/**/*.ts' --fix --ext ts",
+    "lint:fix": "yarn run lint:es:fix && yarn run lint:package:fix",
+    "lint:package": "yarn run lint:package:fix --check",
+    "lint:package:fix": "sort-package-json package.json 'packages/*/package.json'",
+    "release": "lerna publish"
   },
   "devDependencies": {
-    "@jambit/wdio-cucumber-selected-steps-stepdoc": "^0.9.3",
-    "@types/cucumber": "^6.0.1",
-    "@types/glob": "^7.1.3",
-    "@types/jest": "^26.0.13",
-    "@types/js-yaml": "^3.12.5",
-    "@types/node": "^14.6.3",
-    "@types/nunjucks": "^3.1.3",
-    "@typescript-eslint/eslint-plugin": "^4.0.1",
-    "@typescript-eslint/parser": "^4.0.1",
-    "@wdio/cucumber-framework": "^6.4.3",
-    "@wdio/sync": "^6.4.5",
+    "@typescript-eslint/eslint-plugin": "^4.14.0",
+    "@typescript-eslint/parser": "^4.14.0",
     "babel-eslint": "^10.1.0",
-    "cucumber": "^6.0.5",
-    "eslint": "^7.8.1",
-    "eslint-config-airbnb-base": "^14.2.0",
-    "eslint-plugin-import": "^2.22.0",
-    "eslint-plugin-jest": "^23.20.0",
-    "expect-webdriverio": "^1.3.1",
-    "rimraf": "^3.0.2",
-    "ts-jest": "^26.3.0",
-    "typescript": "^4.0.2",
-    "webdriverio": "^6.4.5"
-  },
-  "peerDependencies": {
-    "@wdio/cucumber-framework": "^6.0.0",
-    "@wdio/sync": "^6.0.0",
-    "cucumber": "^6.0.0",
-    "expect-webdriverio": "^1.0.0",
-    "webdriverio": "^6.0.0"
+    "eslint": "^7.18.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1",
+    "lerna": "^3.22.1",
+    "sort-package-json": "^1.48.1"
   }
 }

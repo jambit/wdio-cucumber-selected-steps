@@ -1,7 +1,0 @@
-src
-*.tgz
-.eslintrc.json
-babel.config.js
-tsconfig.json
-bin/configTypes.js
-bin/templateTypes.js

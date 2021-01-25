@@ -1,0 +1,62 @@
+{
+  "name": "@jambit/wdio-cucumber-selected-steps",
+  "version": "1.2.0",
+  "description": "Cucumber step definition basics for easy import",
+  "keywords": [
+    "webdriverio",
+    "cucumber",
+    "test",
+    "selenium",
+    "selectors",
+    "steps"
+  ],
+  "homepage": "https://github.com/jambit/wdio-cucumber-selected-steps",
+  "bugs": {
+    "url": "https://github.com/jambit/wdio-cucumber-selected-steps/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jambit/wdio-cucumber-selected-steps.git"
+  },
+  "license": "MIT",
+  "author": "Santo Pfingsten (Jambit GmbH)",
+  "main": "lib/index.js",
+  "files": [
+    "lib",
+    "STEPS.md"
+  ],
+  "scripts": {
+    "build": "rimraf lib && tsc",
+    "docs": "yarn docs:html && yarn docs:steps",
+    "docs:html": "documentation build src/support/** --parse-extension ts -f html -o ../../docs",
+    "docs:steps": "stepdoc"
+  },
+  "dependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "glob": "^7.1.6",
+    "js-yaml": "^4.0.0"
+  },
+  "devDependencies": {
+    "@jambit/wdio-cucumber-selected-steps-stepdoc": "^1.2.0",
+    "@types/cucumber": "^6.0.1",
+    "@types/glob": "^7.1.3",
+    "@types/js-yaml": "^4.0.0",
+    "@types/node": "^14.14.22",
+    "@types/nunjucks": "^3.1.3",
+    "@wdio/cucumber-framework": "^6.11.1",
+    "@wdio/sync": "^6.11.0",
+    "cucumber": "^6.0.5",
+    "expect-webdriverio": "^1.4.1",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.1.3",
+    "webdriverio": "^6.12.1"
+  },
+  "peerDependencies": {
+    "@wdio/cucumber-framework": "^6.0.0",
+    "@wdio/sync": "^6.0.0",
+    "cucumber": "^6.0.0",
+    "expect-webdriverio": "^1.0.0",
+    "webdriverio": "^6.0.0"
+  }
+}

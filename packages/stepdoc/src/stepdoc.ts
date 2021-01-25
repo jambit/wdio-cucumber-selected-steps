@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 import fs from 'fs';
+import path from 'path';
 import glob from 'glob';
 import documentation, { Comment } from 'documentation';
 import nunjucks from 'nunjucks';
@@ -132,7 +133,8 @@ async function execute(config: StepDocExecutionConfig, files: StepFile[]) {
         context: config.context,
     };
 
-    const rendered = nunjucks.configure(config.options || {}).render(config.template, data);
+    const templatePath = config.templatePath || path.join(__dirname, '..', 'templates');
+    const rendered = nunjucks.configure(templatePath, config.options || {}).render(config.template, data);
 
     fs.writeFileSync(config.file, `${before}${rendered}${after}`);
 }

@@ -4,9 +4,6 @@
     "declaration": true,
     "outDir": "lib",
     "esModuleInterop": true,
-    "types": [
-      "@wdio/sync"
-    ],
     "moduleResolution": "node",
     "target": "es6",
     "lib": [
@@ -15,9 +12,6 @@
     ]
   },
   "include": [
-    "./src"
-  ],
-  "exclude": [
-    "./node_modules"
+    "./packages/*/src"
   ]
 }

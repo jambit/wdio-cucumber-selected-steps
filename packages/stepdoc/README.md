@@ -32,12 +32,12 @@ All you need to to:
 - Create a `stepdoc.json` file next to your package.json (see https://github.com/jambit/wdio-cucumber-selected-steps-demo/ for an example)
 - Run `npx stepdoc` (or create a script in the package.json)
 - You can even customize the (nunjucks) templates used to generate the documentation by copying them from the template directory.
-- Take a look at [src/configTypes.ts](https://github.com/jambit/wdio-cucumber-selected-steps/blob/master/stepdoc/src/configTypes.ts) to see which options are available.
+- Take a look at [src/configTypes.ts](https://github.com/jambit/wdio-cucumber-selected-steps/blob/master/packages/stepdoc/src/configTypes.ts) to see which options are available.
 
 ## Creating a Template
 
 This project contains two different markdown templates.. a short one and a detailed one.
-If you want to write your own, take a look at the ones included and use the [src/templateTypes.ts](https://github.com/jambit/wdio-cucumber-selected-steps/blob/master/stepdoc/src/templateTypes.ts) file to see what data is available (`TemplateData` contains the globally available objects).
+If you want to write your own, take a look at the ones included and use the [src/templateTypes.ts](https://github.com/jambit/wdio-cucumber-selected-steps/blob/master/packages/stepdoc/src/templateTypes.ts) file to see what data is available (`TemplateData` contains the globally available objects).
 
 Check out the [Nunjucks templating documentation](https://mozilla.github.io/nunjucks/templating.html) as well.
 

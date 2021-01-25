@@ -2,7 +2,6 @@
   "compilerOptions": {
     "strict": true,
     "declaration": true,
-    "outDir": "lib",
     "esModuleInterop": true,
     "moduleResolution": "node",
     "target": "es6",
@@ -10,8 +9,5 @@
       "dom",
       "es2018"
     ]
-  },
-  "include": [
-    "./packages/*/src"
-  ]
+  }
 }

@@ -3,7 +3,7 @@
   "compilerOptions": {
     "outDir": "lib",
     "types": [
-      "@wdio/sync"
+      "webdriverio/sync"
     ],
   },
   "include": [

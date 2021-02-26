@@ -1,6 +1,6 @@
+import { ParsedCSSValue } from 'webdriverio';
 import { ElementQuery } from '../elementQuery';
 import { failMessage } from '../failMessage';
-import { CSSProperty } from '@wdio/sync';
 
 /**
  * Check the given property of the given element
@@ -21,7 +21,7 @@ export default (checkCSS: boolean, attrName: string, element: ElementQuery, reve
      * object but we want to assert against a string
      */
     if (attrName.match(/(font-size|line-height|display|color|font-weight)/)) {
-        attributeValue = (attributeValue as CSSProperty).value;
+        attributeValue = (attributeValue as ParsedCSSValue).value ?? '';
     }
     attributeValue = attributeValue.toString();
 

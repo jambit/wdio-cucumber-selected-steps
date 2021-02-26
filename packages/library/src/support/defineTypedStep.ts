@@ -1,6 +1,10 @@
-import { defineStep, StepDefinitionCode, StepDefinitionOptions } from 'cucumber';
+import { defineStep } from '@cucumber/cucumber';
+import { IDefineStepOptions } from '@cucumber/cucumber/lib/support_code_library_builder/types';
 
 import { ParamType } from './paramType';
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+type StepDefinitionCode = (...args: any[]) => any;
 
 function wrapStep(paramTypes: ParamType[], fn: StepDefinitionCode): StepDefinitionCode {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -20,12 +24,12 @@ function wrapStep(paramTypes: ParamType[], fn: StepDefinitionCode): StepDefiniti
  * @param code      The function to execute
  * @see paramType
  */
-export function defineTypedStep(pattern: RegExp | string, types: ParamType[], options: StepDefinitionOptions, code?: StepDefinitionCode): void;
-export function defineTypedStep(pattern: RegExp | string, types: ParamType[], options: StepDefinitionCode): void;
+export function defineTypedStep(pattern: RegExp | string, types: ParamType[], options: IDefineStepOptions, code?: StepDefinitionCode): void;
+export function defineTypedStep(pattern: RegExp | string, types: ParamType[], code: StepDefinitionCode): void;
 export function defineTypedStep(
     pattern: RegExp | string,
     types: ParamType[],
-    options: StepDefinitionOptions | StepDefinitionCode,
+    options: IDefineStepOptions | StepDefinitionCode,
     code?: StepDefinitionCode,
 ): void {
     if (typeof options === 'function') {

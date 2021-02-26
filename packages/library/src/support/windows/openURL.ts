@@ -3,4 +3,6 @@
  * @param type  Type of navigation
  * @param url   The URL or path to navigate to
  */
-export default (type: 'url' | 'path', url: string): void => browser.url((type === 'url') ? url : browser.options.baseUrl + url);
+export default (type: 'url' | 'path', url: string): void => {
+    browser.url((type === 'url') ? url : browser.options.baseUrl + url);
+};

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset='utf-8'>
-  <title>@jambit/wdio-cucumber-selected-steps 1.2.0 | Documentation</title>
+  <title>@jambit/wdio-cucumber-selected-steps 1.3.1 | Documentation</title>
   <meta name='description' content='Cucumber step definition basics for easy import'>
   <meta name='viewport' content='width=device-width,initial-scale=1'>
   <link href='assets/bass.css' rel='stylesheet'>
@@ -15,7 +15,7 @@
       <div id='split-left' class='overflow-auto fs0 height-viewport-100'>
         <div class='py1 px2'>
           <h3 class='mb0 no-anchor'>@jambit/wdio-cucumber-selected-steps</h3>
-          <div class='mb1'><code>1.2.0</code></div>
+          <div class='mb1'><code>1.3.1</code></div>
           <input
             placeholder='Filter'
             id='filter-input'
@@ -1440,7 +1440,7 @@
 
   <p>Define a typed step</p>
 
-    <div class='pre p1 fill-light mt0'>defineTypedStep(pattern: (<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/RegExp">RegExp</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>), types: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="#paramtype">ParamType</a>>, options: StepDefinitionOptions, code: StepDefinitionCode?): void</div>
+    <div class='pre p1 fill-light mt0'>defineTypedStep(pattern: (<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/RegExp">RegExp</a> | <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>), types: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>&#x3C;<a href="#paramtype">ParamType</a>>, options: IDefineStepOptions, code: StepDefinitionCode?): void</div>
   
   
 
@@ -1475,7 +1475,7 @@
       
         <div class='space-bottom0'>
           <div>
-            <span class='code bold'>options</span> <code class='quiet'>(StepDefinitionOptions)</code>
+            <span class='code bold'>options</span> <code class='quiet'>(IDefineStepOptions)</code>
 	    The options to use (optional)
 
           </div>

@@ -5,6 +5,7 @@
     "esModuleInterop": true,
     "moduleResolution": "node",
     "target": "es6",
+    "skipLibCheck": true,
     "lib": [
       "dom",
       "es2018"

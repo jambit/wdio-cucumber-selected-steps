@@ -9,7 +9,7 @@ import { failMessage } from '../failMessage';
  * @param expectedSize  Expected size
  */
 export default (dimension: 'width' | 'height', element: ElementQuery, reverse: boolean, expectedSize: number): void => {
-    const elementSize = element().getSize()[dimension];
+    const elementSize = element().getSize(dimension) as number;
 
     if (reverse) {
         failMessage(() => expect(elementSize).not.toBe(expectedSize), `The element "${element}" should not have a ${dimension} of ${expectedSize}px`);

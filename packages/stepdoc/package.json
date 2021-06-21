@@ -1,6 +1,6 @@
 {
   "name": "@jambit/wdio-cucumber-selected-steps-stepdoc",
-  "version": "2.3.1",
+  "version": "2.3.2",
   "description": "Cucumber step documentation generator for @jambit/wdio-cucumber-selected-steps",
   "keywords": [
     "webdriverio",

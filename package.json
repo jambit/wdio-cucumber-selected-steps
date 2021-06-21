@@ -16,7 +16,8 @@
     "release": "lerna publish"
   },
   "resolutions": {
-    "module-deps-sortable": "5.0.1"
+    "module-deps-sortable": "5.0.1",
+    "trim-newlines": "3.0.1"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^4.27.0",

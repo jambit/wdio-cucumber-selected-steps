@@ -1,6 +1,6 @@
 {
   "name": "@jambit/wdio-cucumber-selected-steps",
-  "version": "2.3.2",
+  "version": "2.3.3",
   "description": "Cucumber step definition basics for easy import",
   "keywords": [
     "webdriverio",

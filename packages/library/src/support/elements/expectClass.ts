@@ -8,13 +8,13 @@ import { failMessage } from '../failMessage';
  * @param expectedClassName The class name to check
  */
 export default (element: ElementQuery, reverse: boolean, expectedClassName: string): void => {
-    const classesList = element().getAttribute('className').split(' ');
+    const classList = element().getProperty('classList');
 
     if (reverse) {
-        failMessage(() => expect(classesList).not.toContain(expectedClassName),
+        failMessage(() => expect(classList).not.toContain(expectedClassName),
             `Element "${element}" should not have the class "${expectedClassName}"`);
     } else {
-        failMessage(() => expect(classesList).toContain(expectedClassName),
+        failMessage(() => expect(classList).toContain(expectedClassName),
             `Element "${element}" should have the class "${expectedClassName}"`);
     }
 };

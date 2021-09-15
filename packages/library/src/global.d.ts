@@ -1,3 +1,5 @@
+declare const global: NodeJS.Global & typeof globalThis;
+
 // Fixme: It's a bit ugly to pollute the NodeJS namespace like this. any better ideas?
 declare namespace NodeJS {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any

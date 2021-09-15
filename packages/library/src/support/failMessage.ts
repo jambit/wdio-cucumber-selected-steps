@@ -6,7 +6,8 @@
 export const failMessage = (fn: () => void, message: string): void => {
     try {
         fn();
-    } catch (e) {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    } catch (e: any) {
         e.message = message;
         if (e.matcherResult) {
             e.matcherResult.message = () => message;

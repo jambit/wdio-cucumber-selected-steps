@@ -1,6 +1,6 @@
 {
   "name": "@jambit/wdio-cucumber-selected-steps",
-  "version": "2.3.3",
+  "version": "2.4.0",
   "description": "Cucumber step definition basics for easy import",
   "keywords": [
     "webdriverio",
@@ -39,7 +39,7 @@
   },
   "devDependencies": {
     "@cucumber/cucumber": "7.3.1",
-    "@jambit/wdio-cucumber-selected-steps-stepdoc": "^2.3.2",
+    "@jambit/wdio-cucumber-selected-steps-stepdoc": "^2.4.0",
     "@types/cucumber": "^7.0.0",
     "@types/glob": "^7.1.4",
     "@types/js-yaml": "^4.0.3",
